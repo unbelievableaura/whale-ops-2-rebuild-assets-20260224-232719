@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
 
-// Password for access (change this to your desired password)
-const ACCESS_PASSWORD = "whaleops";
+// Password for access
+const ACCESS_PASSWORD = "alpha";
 
 export default function Loading() {
   const [, setLocation] = useLocation();
@@ -119,8 +119,7 @@ export default function Loading() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mb-8 text-center"
         >
-          <div className="text-sm font-bold tracking-[0.5em] text-cod-orange mb-2">CLASSIFIED ACCESS</div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+          <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_50px_rgba(255,255,255,0.4)]">
             WHALE OPS
           </h1>
         </motion.div>
