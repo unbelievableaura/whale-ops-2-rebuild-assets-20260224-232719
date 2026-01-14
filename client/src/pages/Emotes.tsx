@@ -29,6 +29,14 @@ const EMOTES = [
     rarity: "RARE",
     color: "#3b82f6"
   },
+  { 
+    id: "emote_4", 
+    name: "SHARK FIGHT", 
+    video: "/images/emote_shark_fight.mp4",
+    preview: "/images/emotes_bg.png",
+    rarity: "LEGENDARY",
+    color: "#ff9500"
+  },
 ];
 
 export default function Emotes() {
