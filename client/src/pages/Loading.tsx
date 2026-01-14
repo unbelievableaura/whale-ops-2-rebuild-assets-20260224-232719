@@ -36,10 +36,10 @@ export default function Loading() {
     if (password.toLowerCase() === ACCESS_PASSWORD.toLowerCase()) {
       setIsUnlocking(true);
       setError(false);
-      // Transition to lobby after unlock animation
+      // Transition to lobby after unlock animation (3 seconds to show ACCESS GRANTED)
       setTimeout(() => {
         setLocation("/lobby");
-      }, 1500);
+      }, 3000);
     } else {
       setError(true);
       setPassword("");
@@ -193,21 +193,19 @@ export default function Loading() {
               className="flex flex-col items-center gap-4"
             >
               <motion.div
-                animate={{ 
-                  opacity: [1, 0.5, 1],
-                  scale: [1, 1.02, 1]
-                }}
-                transition={{ duration: 0.5, repeat: Infinity }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
                 className="text-cod-green text-lg font-bold tracking-[0.3em]"
               >
                 ACCESS GRANTED
               </motion.div>
-              <div className="w-48 h-1 bg-white/10 overflow-hidden">
+              <div className="w-48 h-1 bg-cod-green/30 overflow-hidden mt-2">
                 <motion.div
-                  initial={{ x: "-100%" }}
-                  animate={{ x: "100%" }}
-                  transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-                  className="w-full h-full bg-gradient-to-r from-transparent via-cod-green to-transparent"
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 2.5, ease: "easeOut" }}
+                  className="h-full bg-cod-green"
                 />
               </div>
               <div className="text-xs text-white/50 tracking-widest">
@@ -225,7 +223,7 @@ export default function Loading() {
           className="absolute bottom-6 left-0 right-0 flex justify-between items-center px-8 text-xs text-white/30 tracking-widest"
         >
           <div>WHALE OPS™ v1.0</div>
-          <div>CLASSIFIED // TOP SECRET</div>
+          <div></div>
         </motion.div>
       </div>
 
