@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 // Only 2 emotes with the provided videos
@@ -25,15 +25,34 @@ const EMOTES = [
 export default function Emotes() {
   const [selectedEmote, setSelectedEmote] = useState<typeof EMOTES[0] | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [queuedEmote, setQueuedEmote] = useState<typeof EMOTES[0] | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleEmoteClick = (emote: typeof EMOTES[0]) => {
-    setSelectedEmote(emote);
-    setIsPlaying(true);
+    // If currently playing, queue the emote to play after current one finishes
+    if (isPlaying) {
+      setQueuedEmote(emote);
+    } else {
+      // Not playing, start immediately
+      setSelectedEmote(emote);
+      setIsPlaying(true);
+    }
   };
 
   const handleVideoEnd = () => {
-    setIsPlaying(false);
+    // Check if there's a queued emote
+    if (queuedEmote) {
+      setSelectedEmote(queuedEmote);
+      setQueuedEmote(null);
+      // Keep isPlaying true to continue playing
+      if (videoRef.current) {
+        videoRef.current.currentTime = 0;
+        videoRef.current.load();
+        videoRef.current.play().catch(console.error);
+      }
+    } else {
+      setIsPlaying(false);
+    }
   };
 
   // Play video immediately when emote is selected
@@ -161,44 +180,44 @@ export default function Emotes() {
                 </div>
               )}
 
+              {/* Queued Indicator */}
+              {queuedEmote && (
+                <div className="absolute top-4 right-4 flex items-center gap-2 bg-black/80 px-3 py-1 z-20">
+                  <div className="w-2 h-2 bg-cod-orange rounded-full animate-pulse" />
+                  <span className="text-xs font-bold tracking-widest text-cod-orange">NEXT: {queuedEmote.name}</span>
+                </div>
+              )}
+
               {/* Scanline overlay */}
               <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_2px] pointer-events-none z-10" />
             </div>
 
-            {/* Selected Emote Info */}
-            {selectedEmote && (
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                className="mt-4 p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full"
-              >
-                <div className="flex justify-between items-center">
-                  <div>
-                    <h2 className="text-2xl font-black tracking-wide">{selectedEmote.name}</h2>
-                    <div 
-                      className="text-xs font-bold tracking-[0.3em] mt-1"
-                      style={{ color: selectedEmote.color }}
-                    >
-                      {selectedEmote.rarity}
-                    </div>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => {
-                      setIsPlaying(true);
-                      if (videoRef.current) {
-                        videoRef.current.currentTime = 0;
-                        videoRef.current.play().catch(console.error);
-                      }
-                    }}
-                    className="px-6 py-2 bg-cod-orange/20 border border-cod-orange/50 text-cod-orange font-bold tracking-widest text-sm hover:bg-cod-orange/30 transition-all"
+            {/* Emote Info Box - Always visible */}
+            <div className="mt-4 p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h2 className="text-2xl font-black tracking-wide">
+                    {selectedEmote ? selectedEmote.name : "NO EMOTE SELECTED"}
+                  </h2>
+                  <div 
+                    className="text-xs font-bold tracking-[0.3em] mt-1"
+                    style={{ color: selectedEmote ? selectedEmote.color : '#666' }}
                   >
-                    REPLAY
-                  </motion.button>
+                    {selectedEmote ? selectedEmote.rarity : "SELECT AN EMOTE"}
+                  </div>
                 </div>
-              </motion.div>
-            )}
+                {/* Status indicator instead of replay button */}
+                <div className="text-xs font-bold tracking-widest text-white/40">
+                  {isPlaying ? (
+                    <span className="text-cod-green">● PLAYING</span>
+                  ) : selectedEmote ? (
+                    <span className="text-white/60">● READY</span>
+                  ) : (
+                    <span>● WAITING</span>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Emote Buttons - Vertical on the right */}
@@ -219,7 +238,9 @@ export default function Emotes() {
                     relative w-40 h-40 bg-black/60 border-2 transition-all duration-300 overflow-hidden group
                     ${selectedEmote?.id === emote.id 
                       ? 'border-cod-orange shadow-[0_0_30px_rgba(255,149,0,0.4)]' 
-                      : 'border-white/10 hover:border-white/30'}
+                      : queuedEmote?.id === emote.id
+                        ? 'border-cod-orange/50 shadow-[0_0_15px_rgba(255,149,0,0.2)]'
+                        : 'border-white/10 hover:border-white/30'}
                   `}
                 >
                   {/* Rarity indicator bar */}
@@ -234,6 +255,13 @@ export default function Emotes() {
                     alt={emote.name}
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
                   />
+
+                  {/* Queued badge */}
+                  {queuedEmote?.id === emote.id && (
+                    <div className="absolute top-2 right-2 bg-cod-orange/80 px-2 py-0.5 text-[10px] font-bold tracking-wider z-20">
+                      NEXT
+                    </div>
+                  )}
 
                   {/* Emote Name */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-3 z-10">
