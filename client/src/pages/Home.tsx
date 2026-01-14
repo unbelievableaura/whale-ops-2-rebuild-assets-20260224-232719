@@ -134,11 +134,12 @@ export default function Home() {
         
         {/* Top Bar */}
         <div className={`flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-4 md:gap-0 mt-8`}>
-          <div className="flex items-center gap-4">
-            <div className="flex flex-col">
+          <div className="flex items-center gap-4 w-[90%]">
+            <div className="flex flex-col w-full">
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
-              <h1 className="text-4xl sm:text-5xl md:text-[88px] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] leading-none" style={{paddingTop: '7px'}}>
-                WHALE OPS
+              <h1 className="text-4xl sm:text-5xl md:text-[88px] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] leading-[0.85]" style={{paddingTop: '7px'}}>
+                <span className="block">WHALE</span>
+                <span className="block">OPS</span>
               </h1>
             </div>
           </div>

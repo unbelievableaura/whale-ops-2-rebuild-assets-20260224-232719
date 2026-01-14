@@ -91,7 +91,7 @@ export default function Emotes() {
   }, [selectedEmote, isPlaying]);
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
+    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
       {/* CA Bar Component */}
       <CABar />
 
@@ -125,7 +125,7 @@ export default function Emotes() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full min-h-screen flex flex-col p-4 sm:p-6 md:p-12">
+      <div className="relative z-10 w-full h-screen flex flex-col p-4 sm:p-6 md:p-12 overflow-y-auto">
         
         {/* Header */}
         <div className="flex justify-between items-start mb-8 mt-8">

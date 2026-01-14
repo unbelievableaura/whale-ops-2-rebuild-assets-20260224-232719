@@ -65,7 +65,7 @@ export default function Loading() {
   };
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
+    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
       {/* Background Image with flicker */}
       <motion.div 
         className="absolute inset-0 z-0"
@@ -120,17 +120,18 @@ export default function Loading() {
       <div className="absolute inset-0 z-15 pointer-events-none opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       {/* Main Content */}
-      <div className="relative z-30 w-full min-h-screen flex flex-col items-center justify-end pb-24">
+      <div className="relative z-30 w-full h-screen flex flex-col items-center justify-end pb-24">
         
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="mb-8 text-center"
+          className="mb-8 text-center w-[90%] mx-auto"
         >
-          <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] px-4">
-            WHALE OPS
+          <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] leading-[0.85]">
+            <span className="block">WHALE</span>
+            <span className="block">OPS</span>
           </h1>
         </motion.div>
 
