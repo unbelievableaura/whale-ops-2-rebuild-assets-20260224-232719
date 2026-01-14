@@ -1,6 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import CABar from "@/components/CABar";
 
 // Emotes with provided videos
 const EMOTES = [
@@ -91,6 +92,9 @@ export default function Emotes() {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
+      {/* CA Bar Component */}
+      <CABar />
+
       {/* Dark Background with subtle effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
@@ -124,7 +128,7 @@ export default function Emotes() {
       <div className="relative z-10 w-full min-h-screen flex flex-col p-6 md:p-12">
         
         {/* Header */}
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex justify-between items-start mb-8 mt-8">
           <div>
             <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">ARMORY</div>
             <h1 className="text-4xl md:text-6xl font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">

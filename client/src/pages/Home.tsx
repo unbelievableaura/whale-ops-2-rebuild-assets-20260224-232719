@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import CABar from "@/components/CABar";
 
 // Menu Items Data
 const MENU_ITEMS = [
@@ -10,17 +11,12 @@ const MENU_ITEMS = [
   { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun" },
 ];
 
-// Contract Address - Replace with actual CA
-const CONTRACT_ADDRESS = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-
 export default function Home() {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [activeMenu, setActiveMenu] = useState(MENU_ITEMS[0].id);
   const [showGlitch, setShowGlitch] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [uiVisible, setUiVisible] = useState(true);
-  const [showCABar, setShowCABar] = useState(true);
-  const [copied, setCopied] = useState(false);
 
   const BACKGROUND_VIDEOS = [
     "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43817.mp4",
@@ -28,16 +24,6 @@ export default function Home() {
     "/images/freepik_dynamic_cinematic_shot_of_my_character_riding_on_t_minimax.mp4",
     "/images/freepik_have_my_character_in_combat_on_the_roof_kling_1080p_16_9.mp4"
   ];
-
-  const handleCopyCA = async () => {
-    try {
-      await navigator.clipboard.writeText(CONTRACT_ADDRESS);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy:", err);
-    }
-  };
 
   // CA bar is shown by default, user can dismiss it
 
@@ -113,53 +99,8 @@ export default function Home() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
-      {/* CA Notification Bar */}
-      <AnimatePresence>
-        {showCABar && (
-          <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-r from-cod-orange/20 via-cod-orange/10 to-cod-orange/20 border-b border-cod-orange/30 backdrop-blur-sm"
-          >
-            <div className="flex items-center justify-center gap-4 py-1 px-4">
-              {/* CA Label and Address */}
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-bold tracking-[0.2em] text-cod-orange">CA:</span>
-                <span className="text-xs font-mono text-white/80 tracking-wider">{CONTRACT_ADDRESS}</span>
-              </div>
-              
-              {/* Copy Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleCopyCA}
-                className={`px-3 py-1 text-[10px] font-bold tracking-widest border transition-all duration-200 ${
-                  copied 
-                    ? 'bg-cod-green/20 border-cod-green/50 text-cod-green' 
-                    : 'bg-white/5 border-white/20 text-white/70 hover:bg-white/10 hover:border-white/40'
-                }`}
-              >
-                {copied ? "COPIED!" : "COPY"}
-              </motion.button>
-              
-              {/* Close Button */}
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setShowCABar(false)}
-                className="ml-2 w-5 h-5 flex items-center justify-center text-white/40 hover:text-white/80 transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </motion.button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* CA Bar Component */}
+      <CABar />
 
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
@@ -192,7 +133,7 @@ export default function Home() {
       <div className={`relative z-10 w-full h-full flex flex-col p-6 md:p-12 transition-opacity duration-500 ${uiVisible ? 'opacity-100' : 'opacity-0'}`}>
         
         {/* Top Bar */}
-        <div className={`flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-4 md:gap-0 ${showCABar ? 'mt-8' : ''}`}>
+        <div className={`flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-4 md:gap-0 mt-8`}>
           <div className="flex items-center gap-4">
             <div className="flex flex-col">
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
