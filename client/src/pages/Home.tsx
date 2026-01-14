@@ -139,10 +139,12 @@ export default function Home() {
           <div className="flex items-center gap-4 w-[90%]">
             <div className="flex flex-col w-full">
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
-              <h1 className="text-4xl sm:text-5xl md:text-[88px] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] leading-[0.85]" style={{paddingTop: '7px'}}>
-                <span className="block">WHALE</span>
-                <span className="block">OPS</span>
-              </h1>
+              <img 
+                src="/images/whale-ops-logo.svg" 
+                alt="WHALE OPS" 
+                className="w-full max-w-[400px] md:max-w-[500px] h-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+                style={{paddingTop: '7px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))'}}
+              />
             </div>
           </div>
           
