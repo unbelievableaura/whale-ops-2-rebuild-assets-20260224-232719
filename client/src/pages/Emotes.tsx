@@ -37,6 +37,14 @@ const EMOTES = [
     rarity: "LEGENDARY",
     color: "#ff9500"
   },
+  { 
+    id: "emote_5", 
+    name: "VICTORY", 
+    video: "/images/emote-victory.mp4",
+    preview: "/images/emotes_bg.png",
+    rarity: "EPIC",
+    color: "#a855f7"
+  },
 ];
 
 export default function Emotes() {
