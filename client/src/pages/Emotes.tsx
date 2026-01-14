@@ -123,6 +123,7 @@ export default function Emotes() {
                       transition={{ duration: 0.3 }}
                       className="w-full h-full object-cover"
                       onEnded={handleVideoEnd}
+                      autoPlay
                       muted
                       playsInline
                     >
@@ -151,11 +152,11 @@ export default function Emotes() {
                     <img 
                       src="/images/emotes_bg.png" 
                       alt="Preview" 
-                      className="w-full h-full object-cover opacity-60"
+                      className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                    <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-white/40 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
+                        <div className="text-white/60 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
                       </div>
                     </div>
                   </motion.div>
