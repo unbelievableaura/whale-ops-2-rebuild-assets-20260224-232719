@@ -125,13 +125,13 @@ export default function Emotes() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full min-h-screen flex flex-col p-6 md:p-12">
+      <div className="relative z-10 w-full min-h-screen flex flex-col p-4 sm:p-6 md:p-12">
         
         {/* Header */}
         <div className="flex justify-between items-start mb-8 mt-8">
           <div>
             <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">ARMORY</div>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
               EMOTES
             </h1>
           </div>
@@ -140,7 +140,7 @@ export default function Emotes() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-white/5 border border-white/20 text-white/80 font-bold tracking-widest text-sm hover:bg-white/10 hover:border-white/40 transition-all"
+              className="px-3 sm:px-6 py-2 bg-white/5 border border-white/20 text-white/80 font-bold tracking-widest text-xs sm:text-sm hover:bg-white/10 hover:border-white/40 transition-all"
             >
               ← BACK TO LOBBY
             </motion.button>
@@ -254,7 +254,7 @@ export default function Emotes() {
           <div className="lg:w-1/3 flex flex-col items-center lg:items-start gap-4">
             <h3 className="text-lg font-bold tracking-widest text-white/60 mb-2">AVAILABLE EMOTES</h3>
             
-            <div className="flex flex-row lg:flex-col gap-4">
+            <div className="flex flex-row lg:flex-col gap-2 sm:gap-4 flex-wrap justify-center lg:justify-start">
               {EMOTES.map((emote, index) => (
                 <motion.button
                   key={emote.id}
@@ -265,7 +265,7 @@ export default function Emotes() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleEmoteClick(emote)}
                   className={`
-                    relative w-40 h-40 bg-black/60 border-2 transition-all duration-300 overflow-hidden group
+                    relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-black/60 border-2 transition-all duration-300 overflow-hidden group
                     ${selectedEmote?.id === emote.id 
                       ? 'border-cod-orange shadow-[0_0_30px_rgba(255,149,0,0.4)]' 
                       : queuedEmote?.id === emote.id

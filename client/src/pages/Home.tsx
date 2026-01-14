@@ -130,14 +130,14 @@ export default function Home() {
       </div>
 
       {/* Main Content Container */}
-      <div className={`relative z-10 w-full h-full flex flex-col p-6 md:p-12 transition-opacity duration-500 ${uiVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`relative z-10 w-full h-full flex flex-col p-4 sm:p-6 md:p-12 transition-opacity duration-500 ${uiVisible ? 'opacity-100' : 'opacity-0'}`}>
         
         {/* Top Bar */}
         <div className={`flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-4 md:gap-0 mt-8`}>
           <div className="flex items-center gap-4">
             <div className="flex flex-col">
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
-              <h1 className="text-5xl md:text-[88px] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] leading-none" style={{paddingTop: '7px'}}>
+              <h1 className="text-4xl sm:text-5xl md:text-[88px] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] leading-none" style={{paddingTop: '7px'}}>
                 WHALE OPS
               </h1>
             </div>
@@ -161,7 +161,7 @@ export default function Home() {
         <div className="flex-1 flex items-center">
           <div className="flex gap-4 items-start relative">
             {/* Main Menu List */}
-            <div className="flex flex-col gap-4 w-full md:w-72 pl-0 md:pl-4">
+            <div className="flex flex-col gap-3 sm:gap-4 w-full md:w-72 pl-0 md:pl-4">
               {MENU_ITEMS.map((item, index) => (
                 <motion.div
                   key={item.id}
@@ -187,7 +187,7 @@ export default function Home() {
                     target={item.link && !item.link.startsWith("/") ? "_blank" : undefined}
                     rel={item.link && !item.link.startsWith("/") ? "noopener noreferrer" : undefined}
                     className={`
-                      text-[18px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 block
+                      text-[16px] sm:text-[18px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 block
                       ${activeMenu === item.id 
                         ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] scale-105 origin-left' 
                         : 'text-white/40 hover:text-white/80'}

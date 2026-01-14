@@ -129,7 +129,7 @@ export default function Loading() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mb-8 text-center"
         >
-          <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_50px_rgba(255,255,255,0.4)]">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] px-4">
             WHALE OPS
           </h1>
         </motion.div>
@@ -144,7 +144,7 @@ export default function Loading() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               onSubmit={handleSubmit}
-              className="flex flex-col items-center gap-4"
+              className="flex flex-col items-center gap-4 w-full px-4"
             >
               <div className="text-xs font-bold tracking-[0.3em] text-white/50 mb-2">
                 ENTER ACCESS CODE
@@ -165,7 +165,7 @@ export default function Loading() {
                   onKeyDown={handleKeyDown}
                   placeholder="••••••••"
                   className={`
-                    w-64 px-6 py-3 bg-black/80 border-2 text-center font-mono text-lg tracking-[0.3em]
+                    w-full max-w-[280px] px-6 py-3 bg-black/80 border-2 text-center font-mono text-lg tracking-[0.3em]
                     focus:outline-none focus:border-cod-orange transition-all
                     ${error ? 'border-red-500 text-red-400' : 'border-white/20 text-white'}
                   `}
@@ -230,7 +230,7 @@ export default function Loading() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-6 left-0 right-0 flex justify-between items-center px-8 text-xs text-white/30 tracking-widest"
+          className="absolute bottom-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 text-[10px] sm:text-xs text-white/30 tracking-widest"
         >
           <div>WHALE OPS™ v1.0</div>
           <div></div>
