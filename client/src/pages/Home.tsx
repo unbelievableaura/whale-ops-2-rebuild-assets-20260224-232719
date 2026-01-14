@@ -137,7 +137,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-r from-cod-orange/20 via-cod-orange/10 to-cod-orange/20 border-b border-cod-orange/30 backdrop-blur-sm"
           >
-            <div className="flex items-center justify-center gap-4 py-2 px-4">
+            <div className="flex items-center justify-center gap-4 py-1 px-4">
               {/* CA Label and Address */}
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold tracking-[0.2em] text-cod-orange">CA:</span>
