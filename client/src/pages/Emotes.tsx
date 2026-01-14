@@ -110,17 +110,17 @@ export default function Emotes() {
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cod-orange z-20" />
               
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode="sync">
                 {selectedEmote ? (
                   isPlaying ? (
                     // Video playing
                     <motion.video
                       key={`${selectedEmote.id}-video`}
                       ref={videoRef}
-                      initial={{ opacity: 0 }}
+                      initial={{ opacity: 1 }}
                       animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                      exit={{ opacity: 1 }}
+                      transition={{ duration: 0 }}
                       className="w-full h-full object-cover"
                       onEnded={handleVideoEnd}
                       autoPlay
@@ -135,10 +135,10 @@ export default function Emotes() {
                       key={`${selectedEmote.id}-preview`}
                       src={selectedEmote.preview}
                       alt={selectedEmote.name}
-                      initial={{ opacity: 0 }}
+                      initial={{ opacity: 1 }}
                       animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
+                      exit={{ opacity: 1 }}
+                      transition={{ duration: 0 }}
                       className="w-full h-full object-cover"
                     />
                   )
