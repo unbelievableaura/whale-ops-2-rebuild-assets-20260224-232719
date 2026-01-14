@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
-// Only 2 emotes with the provided videos
+// Emotes with provided videos
 const EMOTES = [
   { 
     id: "emote_1", 
@@ -19,6 +19,14 @@ const EMOTES = [
     preview: "/images/emotes_bg.png",
     rarity: "EPIC",
     color: "#a855f7"
+  },
+  { 
+    id: "emote_3", 
+    name: "BATTLE READY", 
+    video: "/images/emote_3.mp4",
+    preview: "/images/emotes_bg.png",
+    rarity: "RARE",
+    color: "#3b82f6"
   },
 ];
 
@@ -310,6 +318,10 @@ export default function Emotes() {
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-[#a855f7]" />
                 <span className="text-white/60">EPIC</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-[#3b82f6]" />
+                <span className="text-white/60">RARE</span>
               </div>
             </div>
           </div>
