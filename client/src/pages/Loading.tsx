@@ -132,7 +132,7 @@ export default function Loading() {
           <img 
             src="/images/whale-ops-logo.svg" 
             alt="WHALE OPS" 
-            className="w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] filter brightness-110 mx-auto"
+            className="w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] filter brightness-110 mx-auto mix-blend-screen"
             style={{ filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.3))' }}
           />
         </motion.div>

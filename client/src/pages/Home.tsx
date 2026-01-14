@@ -142,7 +142,7 @@ export default function Home() {
               <img 
                 src="/images/whale-ops-logo.svg" 
                 alt="WHALE OPS" 
-                className="w-full max-w-[600px] md:max-w-[750px] h-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+                className="w-full max-w-[600px] md:max-w-[750px] h-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] mix-blend-screen"
                 style={{paddingTop: '12px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))'}}
               />
             </div>
