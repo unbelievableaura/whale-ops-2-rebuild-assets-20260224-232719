@@ -110,58 +110,48 @@ export default function Emotes() {
               <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cod-orange z-20" />
               
-              <AnimatePresence mode="sync">
-                {selectedEmote ? (
-                  isPlaying ? (
-                    // Video playing
-                    <motion.video
-                      key={`${selectedEmote.id}-video`}
-                      ref={videoRef}
-                      initial={{ opacity: 1 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 1 }}
-                      transition={{ duration: 0 }}
-                      className="w-full h-full object-cover"
-                      onEnded={handleVideoEnd}
-                      autoPlay
-                      muted
-                      playsInline
-                    >
-                      <source src={selectedEmote.video} type="video/mp4" />
-                    </motion.video>
-                  ) : (
-                    // Image preview (after video ends or before replay)
-                    <motion.img
-                      key={`${selectedEmote.id}-preview`}
-                      src={selectedEmote.preview}
-                      alt={selectedEmote.name}
-                      initial={{ opacity: 1 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 1 }}
-                      transition={{ duration: 0 }}
-                      className="w-full h-full object-cover"
-                    />
-                  )
-                ) : (
-                  // Default state - show the preview image
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="w-full h-full relative"
+              {/* Stable container for content - no animation on container */}
+              <div className="absolute inset-0 w-full h-full">
+                {/* Default preview image - always present as base layer */}
+                <img 
+                  src="/images/emotes_bg.png" 
+                  alt="Preview" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
+                {/* Video layer - positioned on top when playing */}
+                {selectedEmote && isPlaying && (
+                  <video
+                    key={`${selectedEmote.id}-video`}
+                    ref={videoRef}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    onEnded={handleVideoEnd}
+                    autoPlay
+                    muted
+                    playsInline
                   >
-                    <img 
-                      src="/images/emotes_bg.png" 
-                      alt="Preview" 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-white/60 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
-                      </div>
-                    </div>
-                  </motion.div>
+                    <source src={selectedEmote.video} type="video/mp4" />
+                  </video>
                 )}
-              </AnimatePresence>
+                
+                {/* Preview image layer - shows when emote selected but not playing */}
+                {selectedEmote && !isPlaying && (
+                  <img 
+                    src={selectedEmote.preview}
+                    alt={selectedEmote.name}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
+                
+                {/* Default text overlay - only when no emote selected */}
+                {!selectedEmote && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-white/60 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Playing Indicator */}
               {isPlaying && selectedEmote && (
