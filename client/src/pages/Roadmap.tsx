@@ -30,7 +30,8 @@ const ROADMAP_PHASES = [
       "Token Launch",
       "DEX Listings",
       "Partnership Announcements",
-      "Community Events"
+      "Community Events",
+      "Betting Game Announced"
     ]
   },
   {
