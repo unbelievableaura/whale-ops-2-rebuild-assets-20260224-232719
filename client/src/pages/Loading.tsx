@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
+import { useAuth } from "@/contexts/AuthContext";
 
 // Password for access
 const ACCESS_PASSWORD = "alpha";
 
 export default function Loading() {
   const [, setLocation] = useLocation();
+  const { isAuthenticated, authenticate } = useAuth();
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isUnlocking, setIsUnlocking] = useState(false);
@@ -23,12 +25,19 @@ export default function Loading() {
     return () => clearInterval(flickerInterval);
   }, []);
 
+  // Redirect to lobby if already authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLocation("/lobby");
+    }
+  }, [isAuthenticated, setLocation]);
+
   // Focus input on mount
   useEffect(() => {
-    if (inputRef.current) {
+    if (inputRef.current && !isAuthenticated) {
       inputRef.current.focus();
     }
-  }, []);
+  }, [isAuthenticated]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +45,7 @@ export default function Loading() {
     if (password.toLowerCase() === ACCESS_PASSWORD.toLowerCase()) {
       setIsUnlocking(true);
       setError(false);
+      authenticate(); // Save authentication state
       // Transition to lobby after unlock animation (3 seconds to show ACCESS GRANTED)
       setTimeout(() => {
         setLocation("/lobby");

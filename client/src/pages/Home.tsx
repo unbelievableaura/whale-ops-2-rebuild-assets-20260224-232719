@@ -19,7 +19,7 @@ export default function Home() {
   const [showGlitch, setShowGlitch] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [uiVisible, setUiVisible] = useState(true);
-  const [showNotification, setShowNotification] = useState(false);
+  const [showCABar, setShowCABar] = useState(true);
   const [copied, setCopied] = useState(false);
 
   const BACKGROUND_VIDEOS = [
@@ -39,21 +39,7 @@ export default function Home() {
     }
   };
 
-  // Notification timing: show after 3s, hide after 10s
-  useEffect(() => {
-    const showTimer = setTimeout(() => {
-      setShowNotification(true);
-    }, 3000);
-
-    const hideTimer = setTimeout(() => {
-      setShowNotification(false);
-    }, 13000); // 3s delay + 10s visible = 13s total
-
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
-  }, []);
+  // CA bar is shown by default, user can dismiss it
 
   useEffect(() => {
     // Cycle background videos every 6 seconds
@@ -129,7 +115,7 @@ export default function Home() {
     <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
       {/* CA Notification Bar */}
       <AnimatePresence>
-        {showNotification && (
+        {showCABar && (
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -162,7 +148,7 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                onClick={() => setShowNotification(false)}
+                onClick={() => setShowCABar(false)}
                 className="ml-2 w-5 h-5 flex items-center justify-center text-white/40 hover:text-white/80 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
@@ -206,7 +192,7 @@ export default function Home() {
       <div className={`relative z-10 w-full h-full flex flex-col p-6 md:p-12 transition-opacity duration-500 ${uiVisible ? 'opacity-100' : 'opacity-0'}`}>
         
         {/* Top Bar */}
-        <div className={`flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-4 md:gap-0 ${showNotification ? 'mt-8' : ''}`}>
+        <div className={`flex flex-col md:flex-row justify-between items-start w-full mb-8 gap-4 md:gap-0 ${showCABar ? 'mt-8' : ''}`}>
           <div className="flex items-center gap-4">
             <div className="flex flex-col">
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
