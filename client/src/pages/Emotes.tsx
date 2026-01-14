@@ -27,6 +27,7 @@ export default function Emotes() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [queuedEmote, setQueuedEmote] = useState<typeof EMOTES[0] | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const playPromiseRef = useRef<Promise<void> | null>(null);
 
   const handleEmoteClick = (emote: typeof EMOTES[0]) => {
     // If currently playing, queue the emote to play after current one finishes
@@ -42,25 +43,42 @@ export default function Emotes() {
   const handleVideoEnd = () => {
     // Check if there's a queued emote
     if (queuedEmote) {
-      setSelectedEmote(queuedEmote);
+      const nextEmote = queuedEmote;
       setQueuedEmote(null);
-      // Keep isPlaying true to continue playing
-      if (videoRef.current) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.load();
-        videoRef.current.play().catch(console.error);
-      }
+      setSelectedEmote(nextEmote);
+      // isPlaying stays true, useEffect will handle the new video
     } else {
       setIsPlaying(false);
     }
   };
 
-  // Play video immediately when emote is selected
+  // Play video when emote is selected - properly handle async play
   useEffect(() => {
-    if (videoRef.current && selectedEmote && isPlaying) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(console.error);
+    const video = videoRef.current;
+    if (video && selectedEmote && isPlaying) {
+      video.currentTime = 0;
+      // Store the play promise to handle interruptions gracefully
+      playPromiseRef.current = video.play();
+      playPromiseRef.current.catch((error) => {
+        // Only log if it's not an abort error (which happens when video is removed)
+        if (error.name !== 'AbortError') {
+          console.error('Video play error:', error);
+        }
+      });
     }
+    
+    // Cleanup: pause video if component unmounts or video changes
+    return () => {
+      if (playPromiseRef.current) {
+        playPromiseRef.current.then(() => {
+          if (video) {
+            video.pause();
+          }
+        }).catch(() => {
+          // Ignore errors during cleanup
+        });
+      }
+    };
   }, [selectedEmote, isPlaying]);
 
   return (
