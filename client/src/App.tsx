@@ -9,6 +9,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Loading from "./pages/Loading";
 import Home from "./pages/Home";
 import Emotes from "./pages/Emotes";
+import Roadmap from "./pages/Roadmap";
 
 
 function Router() {
@@ -23,6 +24,11 @@ function Router() {
       <Route path={"/emotes"}>
         <ProtectedRoute>
           <Emotes />
+        </ProtectedRoute>
+      </Route>
+      <Route path={"/roadmap"}>
+        <ProtectedRoute>
+          <Roadmap />
         </ProtectedRoute>
       </Route>
       <Route path={"/404"} component={NotFound} />
