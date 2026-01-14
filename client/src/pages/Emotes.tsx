@@ -2,70 +2,27 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 
-// Emote Data with video paths
+// Only 2 emotes with the provided videos
 const EMOTES = [
   { 
-    id: "tactical_stance", 
+    id: "emote_1", 
     name: "TACTICAL STANCE", 
-    video: "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43817.mp4",
+    video: "/images/emote_1.mp4",
     rarity: "LEGENDARY",
     color: "#ff9500"
   },
   { 
-    id: "combat_ready", 
+    id: "emote_2", 
     name: "COMBAT READY", 
-    video: "/images/freepik_a-focused-armored-dolphinheaded-soldier-stands-mos_kling_1080p_16-9_24fps_43816.mp4",
+    video: "/images/emote_2.mp4",
     rarity: "EPIC",
     color: "#a855f7"
-  },
-  { 
-    id: "whale_rider", 
-    name: "WHALE RIDER", 
-    video: "/images/freepik_dynamic_cinematic_shot_of_my_character_riding_on_t_minimax.mp4",
-    rarity: "LEGENDARY",
-    color: "#ff9500"
-  },
-  { 
-    id: "rooftop_assault", 
-    name: "ROOFTOP ASSAULT", 
-    video: "/images/freepik_have_my_character_in_combat_on_the_roof_kling_1080p_16_9.mp4",
-    rarity: "EPIC",
-    color: "#a855f7"
-  },
-  { 
-    id: "futuristic_pose", 
-    name: "FUTURISTIC POSE", 
-    video: "/images/freepik_a_hyperrealistic_cinematic_shot_of_a_futuristic_an_minimax.mp4",
-    rarity: "RARE",
-    color: "#3b82f6"
-  },
-  { 
-    id: "valhalla_arrival", 
-    name: "VALHALLA ARRIVAL", 
-    video: "/images/freepik_a-breathtaking-heavenly-valhalla-fortress-floating_kling_1080p_16-9_24fps_43814.mp4",
-    rarity: "LEGENDARY",
-    color: "#ff9500"
-  },
-  { 
-    id: "whale_dance", 
-    name: "WHALE DANCE", 
-    video: "/images/whalevid.mp4",
-    rarity: "COMMON",
-    color: "#6b7280"
-  },
-  { 
-    id: "stealth_mode", 
-    name: "STEALTH MODE", 
-    video: "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_seedance_720p_16-9_24fps_43813.mp4",
-    rarity: "RARE",
-    color: "#3b82f6"
   },
 ];
 
 export default function Emotes() {
   const [selectedEmote, setSelectedEmote] = useState<typeof EMOTES[0] | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hoveredEmote, setHoveredEmote] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleEmoteClick = (emote: typeof EMOTES[0]) => {
@@ -77,42 +34,27 @@ export default function Emotes() {
     setIsPlaying(false);
   };
 
+  // Play video immediately when emote is selected
   useEffect(() => {
-    if (videoRef.current && isPlaying) {
+    if (videoRef.current && selectedEmote && isPlaying) {
       videoRef.current.currentTime = 0;
-      videoRef.current.play();
+      videoRef.current.play().catch(console.error);
     }
   }, [selectedEmote, isPlaying]);
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
-      {/* Background with subtle gradient */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+        <img 
+          src="/images/emotes_bg.png" 
+          alt="Background" 
+          className="w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+        {/* Noise overlay */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5" />
-        {/* Animated orange streaks in background */}
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          {[...Array(5)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 bg-gradient-to-b from-transparent via-orange-500 to-transparent"
-              style={{
-                left: `${15 + i * 18}%`,
-                height: '150%',
-                top: '-25%',
-              }}
-              animate={{
-                opacity: [0.3, 0.8, 0.3],
-                scaleY: [1, 1.1, 1],
-              }}
-              transition={{
-                duration: 2 + i * 0.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Main Content */}
@@ -139,11 +81,11 @@ export default function Emotes() {
         </div>
 
         {/* Main Layout */}
-        <div className="flex-1 flex flex-col lg:flex-row gap-8">
+        <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center justify-center">
           
-          {/* Video Preview Panel */}
-          <div className="lg:w-1/2 flex flex-col">
-            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group">
+          {/* Video Preview Panel - Larger and centered */}
+          <div className="lg:w-2/3 flex flex-col">
+            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-4xl mx-auto w-full">
               {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cod-orange z-20" />
@@ -155,7 +97,7 @@ export default function Emotes() {
                   <motion.video
                     key={selectedEmote.id}
                     ref={videoRef}
-                    initial={{ opacity: 0, scale: 1.1 }}
+                    initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
@@ -173,7 +115,7 @@ export default function Emotes() {
                     className="w-full h-full flex items-center justify-center"
                   >
                     <div className="text-center">
-                      <div className="text-6xl mb-4 opacity-20">🐋</div>
+                      <div className="text-8xl mb-4 opacity-20">🐋</div>
                       <div className="text-white/40 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
                     </div>
                   </motion.div>
@@ -197,9 +139,9 @@ export default function Emotes() {
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="mt-4 p-4 bg-black/60 border border-white/10"
+                className="mt-4 p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full"
               >
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-center">
                   <div>
                     <h2 className="text-2xl font-black tracking-wide">{selectedEmote.name}</h2>
                     <div 
@@ -216,7 +158,7 @@ export default function Emotes() {
                       setIsPlaying(true);
                       if (videoRef.current) {
                         videoRef.current.currentTime = 0;
-                        videoRef.current.play();
+                        videoRef.current.play().catch(console.error);
                       }
                     }}
                     className="px-6 py-2 bg-cod-orange/20 border border-cod-orange/50 text-cod-orange font-bold tracking-widest text-sm hover:bg-cod-orange/30 transition-all"
@@ -228,29 +170,24 @@ export default function Emotes() {
             )}
           </div>
 
-          {/* Emote Grid */}
-          <div className="lg:w-1/2">
-            <div className="mb-4 flex items-center justify-between">
-              <h3 className="text-lg font-bold tracking-widest text-white/60">AVAILABLE EMOTES</h3>
-              <div className="text-sm text-white/40">{EMOTES.length} UNLOCKED</div>
-            </div>
+          {/* Emote Buttons - Vertical on the right */}
+          <div className="lg:w-1/3 flex flex-col items-center lg:items-start gap-4">
+            <h3 className="text-lg font-bold tracking-widest text-white/60 mb-2">AVAILABLE EMOTES</h3>
             
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <div className="flex flex-row lg:flex-col gap-4">
               {EMOTES.map((emote, index) => (
                 <motion.button
                   key={emote.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.05, x: -5 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleEmoteClick(emote)}
-                  onMouseEnter={() => setHoveredEmote(emote.id)}
-                  onMouseLeave={() => setHoveredEmote(null)}
                   className={`
-                    relative aspect-square bg-black/60 border-2 transition-all duration-300 overflow-hidden group
+                    relative w-40 h-40 bg-black/60 border-2 transition-all duration-300 overflow-hidden group
                     ${selectedEmote?.id === emote.id 
-                      ? 'border-cod-orange shadow-[0_0_20px_rgba(255,149,0,0.3)]' 
+                      ? 'border-cod-orange shadow-[0_0_30px_rgba(255,149,0,0.4)]' 
                       : 'border-white/10 hover:border-white/30'}
                   `}
                 >
@@ -260,37 +197,24 @@ export default function Emotes() {
                     style={{ backgroundColor: emote.color }}
                   />
                   
-                  {/* Video thumbnail preview on hover */}
-                  {hoveredEmote === emote.id && (
-                    <video
-                      className="absolute inset-0 w-full h-full object-cover opacity-60"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    >
-                      <source src={emote.video} type="video/mp4" />
-                    </video>
-                  )}
-                  
-                  {/* Emote Icon/Placeholder */}
+                  {/* Emote Icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className={`text-4xl transition-all duration-300 ${hoveredEmote === emote.id ? 'opacity-0' : 'opacity-40'}`}>
+                    <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity">
                       🐋
                     </div>
                   </div>
 
                   {/* Emote Name */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-2">
-                    <div className="text-[10px] font-bold tracking-wider text-white/90 truncate">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-3">
+                    <div className="text-xs font-bold tracking-wider text-white/90 text-center">
                       {emote.name}
                     </div>
                   </div>
 
-                  {/* Selection indicator */}
+                  {/* Selection glow */}
                   {selectedEmote?.id === emote.id && (
                     <motion.div
-                      layoutId="selectedIndicator"
+                      layoutId="selectedGlow"
                       className="absolute inset-0 border-2 border-cod-orange pointer-events-none"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -301,7 +225,7 @@ export default function Emotes() {
             </div>
 
             {/* Rarity Legend */}
-            <div className="mt-6 flex flex-wrap gap-4 text-xs font-bold tracking-widest">
+            <div className="mt-6 flex flex-col gap-2 text-xs font-bold tracking-widest">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-[#ff9500]" />
                 <span className="text-white/60">LEGENDARY</span>
@@ -309,14 +233,6 @@ export default function Emotes() {
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-[#a855f7]" />
                 <span className="text-white/60">EPIC</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-[#3b82f6]" />
-                <span className="text-white/60">RARE</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-[#6b7280]" />
-                <span className="text-white/60">COMMON</span>
               </div>
             </div>
           </div>
