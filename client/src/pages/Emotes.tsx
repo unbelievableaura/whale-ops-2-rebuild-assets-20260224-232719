@@ -8,6 +8,7 @@ const EMOTES = [
     id: "emote_1", 
     name: "TACTICAL STANCE", 
     video: "/images/emote_1.mp4",
+    preview: "/images/emotes_bg.png",
     rarity: "LEGENDARY",
     color: "#ff9500"
   },
@@ -15,6 +16,7 @@ const EMOTES = [
     id: "emote_2", 
     name: "COMBAT READY", 
     video: "/images/emote_2.mp4",
+    preview: "/images/emotes_bg.png",
     rarity: "EPIC",
     color: "#a855f7"
   },
@@ -44,17 +46,33 @@ export default function Emotes() {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
-      {/* Background Image */}
+      {/* Dark Background with subtle effects */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/images/emotes_bg.png" 
-          alt="Background" 
-          className="w-full h-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
-        {/* Noise overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5" />
+        {/* Animated orange streaks in background */}
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 bg-gradient-to-b from-transparent via-orange-500 to-transparent"
+              style={{
+                left: `${15 + i * 18}%`,
+                height: '150%',
+                top: '-25%',
+              }}
+              animate={{
+                opacity: [0.3, 0.8, 0.3],
+                scaleY: [1, 1.1, 1],
+              }}
+              transition={{
+                duration: 2 + i * 0.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       {/* Main Content */}
@@ -83,7 +101,7 @@ export default function Emotes() {
         {/* Main Layout */}
         <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center justify-center">
           
-          {/* Video Preview Panel - Larger and centered */}
+          {/* Video Preview Panel - Shows image preview, plays video on click */}
           <div className="lg:w-2/3 flex flex-col">
             <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-4xl mx-auto w-full">
               {/* Corner Accents */}
@@ -94,29 +112,51 @@ export default function Emotes() {
               
               <AnimatePresence mode="wait">
                 {selectedEmote ? (
-                  <motion.video
-                    key={selectedEmote.id}
-                    ref={videoRef}
-                    initial={{ opacity: 0, scale: 1.05 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-full h-full object-cover"
-                    onEnded={handleVideoEnd}
-                    muted
-                    playsInline
-                  >
-                    <source src={selectedEmote.video} type="video/mp4" />
-                  </motion.video>
+                  isPlaying ? (
+                    // Video playing
+                    <motion.video
+                      key={`${selectedEmote.id}-video`}
+                      ref={videoRef}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="w-full h-full object-cover"
+                      onEnded={handleVideoEnd}
+                      muted
+                      playsInline
+                    >
+                      <source src={selectedEmote.video} type="video/mp4" />
+                    </motion.video>
+                  ) : (
+                    // Image preview (after video ends or before replay)
+                    <motion.img
+                      key={`${selectedEmote.id}-preview`}
+                      src={selectedEmote.preview}
+                      alt={selectedEmote.name}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="w-full h-full object-cover"
+                    />
+                  )
                 ) : (
+                  // Default state - show the preview image
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="w-full h-full flex items-center justify-center"
+                    className="w-full h-full relative"
                   >
-                    <div className="text-center">
-                      <div className="text-8xl mb-4 opacity-20">🐋</div>
-                      <div className="text-white/40 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
+                    <img 
+                      src="/images/emotes_bg.png" 
+                      alt="Preview" 
+                      className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                      <div className="text-center">
+                        <div className="text-white/40 tracking-widest text-sm">SELECT AN EMOTE TO PREVIEW</div>
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -193,19 +233,19 @@ export default function Emotes() {
                 >
                   {/* Rarity indicator bar */}
                   <div 
-                    className="absolute top-0 left-0 right-0 h-1"
+                    className="absolute top-0 left-0 right-0 h-1 z-10"
                     style={{ backgroundColor: emote.color }}
                   />
                   
-                  {/* Emote Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-5xl opacity-40 group-hover:opacity-60 transition-opacity">
-                      🐋
-                    </div>
-                  </div>
+                  {/* Preview Image as thumbnail */}
+                  <img 
+                    src={emote.preview} 
+                    alt={emote.name}
+                    className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
+                  />
 
                   {/* Emote Name */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-3">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-3 z-10">
                     <div className="text-xs font-bold tracking-wider text-white/90 text-center">
                       {emote.name}
                     </div>
@@ -215,7 +255,7 @@ export default function Emotes() {
                   {selectedEmote?.id === emote.id && (
                     <motion.div
                       layoutId="selectedGlow"
-                      className="absolute inset-0 border-2 border-cod-orange pointer-events-none"
+                      className="absolute inset-0 border-2 border-cod-orange pointer-events-none z-20"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                     />
