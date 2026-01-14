@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CABar from "@/components/CABar";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 // Menu Items Data
 const MENU_ITEMS = [
-  { id: "start", label: "START GAME", active: false },
+  { id: "start", label: "START GAME", active: false, locked: true, tooltip: "COMING SOON" },
   { id: "emotes", label: "EMOTES", active: false, link: "/emotes" },
   { id: "roadmap", label: "ROADMAP", active: false, link: "/roadmap" },
   { id: "twitter", label: "X", active: false, link: "https://twitter.com" },
@@ -184,19 +185,39 @@ export default function Home() {
                     />
                   )}
                   
-                  <a 
-                    href={item.link}
-                    target={item.link && !item.link.startsWith("/") ? "_blank" : undefined}
-                    rel={item.link && !item.link.startsWith("/") ? "noopener noreferrer" : undefined}
-                    className={`
-                      text-[16px] sm:text-[18px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 block
-                      ${activeMenu === item.id 
-                        ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] scale-105 origin-left' 
-                        : 'text-white/40 hover:text-white/80'}
-                    `}
-                  >
-                    {item.label}
-                  </a>
+                  {item.locked ? (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span
+                          className={`
+                            text-[16px] sm:text-[18px] font-bold uppercase tracking-wide cursor-not-allowed transition-all duration-300 block opacity-40
+                            ${activeMenu === item.id 
+                              ? 'text-white/60' 
+                              : 'text-white/30'}
+                          `}
+                        >
+                          🔒 {item.label}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent side="right" className="bg-black/90 border-cod-orange text-cod-orange font-bold tracking-widest text-xs">
+                        {item.tooltip}
+                      </TooltipContent>
+                    </Tooltip>
+                  ) : (
+                    <a 
+                      href={item.link}
+                      target={item.link && !item.link.startsWith("/") ? "_blank" : undefined}
+                      rel={item.link && !item.link.startsWith("/") ? "noopener noreferrer" : undefined}
+                      className={`
+                        text-[16px] sm:text-[18px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 block
+                        ${activeMenu === item.id 
+                          ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] scale-105 origin-left' 
+                          : 'text-white/40 hover:text-white/80'}
+                      `}
+                    >
+                      {item.label}
+                    </a>
+                  )}
                 </motion.div>
               ))}
             </div>
