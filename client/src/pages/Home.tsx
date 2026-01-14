@@ -19,7 +19,7 @@ export default function Home() {
   const [showGlitch, setShowGlitch] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [uiVisible, setUiVisible] = useState(true);
-  const [showNotification, setShowNotification] = useState(true);
+  const [showNotification, setShowNotification] = useState(false);
   const [copied, setCopied] = useState(false);
 
   const BACKGROUND_VIDEOS = [
@@ -38,6 +38,22 @@ export default function Home() {
       console.error("Failed to copy:", err);
     }
   };
+
+  // Notification timing: show after 3s, hide after 10s
+  useEffect(() => {
+    const showTimer = setTimeout(() => {
+      setShowNotification(true);
+    }, 3000);
+
+    const hideTimer = setTimeout(() => {
+      setShowNotification(false);
+    }, 13000); // 3s delay + 10s visible = 13s total
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+    };
+  }, []);
 
   useEffect(() => {
     // Cycle background videos every 6 seconds
@@ -118,7 +134,7 @@ export default function Home() {
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-r from-cod-orange/20 via-cod-orange/10 to-cod-orange/20 border-b border-cod-orange/30 backdrop-blur-sm"
           >
             <div className="flex items-center justify-center gap-4 py-2 px-4">
