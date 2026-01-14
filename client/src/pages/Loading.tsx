@@ -129,10 +129,12 @@ export default function Loading() {
           transition={{ duration: 1, delay: 0.5 }}
           className="mb-8 text-center w-[90%] mx-auto"
         >
-          <h1 className="text-5xl sm:text-7xl md:text-9xl lg:text-[10rem] font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] leading-[0.85]">
-            <span className="block">WHALE</span>
-            <span className="block">OPS</span>
-          </h1>
+          <img 
+            src="/images/whale-ops-logo.svg" 
+            alt="WHALE OPS" 
+            className="w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] filter brightness-110"
+            style={{ filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.3))' }}
+          />
         </motion.div>
 
         {/* Password Input */}
