@@ -262,7 +262,7 @@ export default function Emotes() {
           <div className="lg:w-1/3 flex flex-col items-center lg:items-start gap-4">
             <h3 className="text-lg font-bold tracking-widest text-white/60 mb-2">AVAILABLE EMOTES</h3>
             
-            <div className="flex flex-row lg:flex-col gap-2 sm:gap-4 flex-wrap justify-center lg:justify-start">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
               {EMOTES.map((emote, index) => (
                 <motion.button
                   key={emote.id}
