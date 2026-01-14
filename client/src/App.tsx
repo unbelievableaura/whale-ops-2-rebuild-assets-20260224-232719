@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Loading from "./pages/Loading";
 import Home from "./pages/Home";
 import Emotes from "./pages/Emotes";
 
@@ -11,7 +12,8 @@ import Emotes from "./pages/Emotes";
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
+      <Route path={"/"} component={Loading} />
+      <Route path={"/lobby"} component={Home} />
       <Route path={"/emotes"} component={Emotes} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

@@ -1,0 +1,246 @@
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "wouter";
+
+// Password for access (change this to your desired password)
+const ACCESS_PASSWORD = "whaleops";
+
+export default function Loading() {
+  const [, setLocation] = useLocation();
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [isUnlocking, setIsUnlocking] = useState(false);
+  const [flickerIntensity, setFlickerIntensity] = useState(1);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Random flicker effect
+  useEffect(() => {
+    const flickerInterval = setInterval(() => {
+      // Random flicker between 0.85 and 1
+      setFlickerIntensity(0.85 + Math.random() * 0.15);
+    }, 100 + Math.random() * 200);
+
+    return () => clearInterval(flickerInterval);
+  }, []);
+
+  // Focus input on mount
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (password.toLowerCase() === ACCESS_PASSWORD.toLowerCase()) {
+      setIsUnlocking(true);
+      setError(false);
+      // Transition to lobby after unlock animation
+      setTimeout(() => {
+        setLocation("/lobby");
+      }, 1500);
+    } else {
+      setError(true);
+      setPassword("");
+      // Shake animation handled by CSS
+      setTimeout(() => setError(false), 500);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
+    }
+  };
+
+  return (
+    <div className="relative w-full min-h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
+      {/* Background Image with flicker */}
+      <motion.div 
+        className="absolute inset-0 z-0"
+        animate={{ opacity: flickerIntensity }}
+        transition={{ duration: 0.05 }}
+      >
+        <img 
+          src="/images/loading_bg.png" 
+          alt="WHALE OPS" 
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Dark overlay gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/20" />
+      </motion.div>
+
+      {/* Vignette Effect */}
+      <div 
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0.9) 100%)'
+        }}
+      />
+
+      {/* Animated orange streaks */}
+      <div className="absolute inset-0 z-5 overflow-hidden opacity-30 pointer-events-none">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 bg-gradient-to-b from-transparent via-orange-500 to-transparent"
+            style={{
+              left: `${10 + i * 20}%`,
+              height: '150%',
+              top: '-25%',
+            }}
+            animate={{
+              opacity: [0.2, 0.6, 0.2],
+              scaleY: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 2 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Scanline Effect */}
+      <div className="absolute inset-0 z-20 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_2px,3px_100%] bg-repeat" />
+
+      {/* Noise/Grain overlay */}
+      <div className="absolute inset-0 z-15 pointer-events-none opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
+      {/* Main Content */}
+      <div className="relative z-30 w-full min-h-screen flex flex-col items-center justify-end pb-24">
+        
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mb-8 text-center"
+        >
+          <div className="text-sm font-bold tracking-[0.5em] text-cod-orange mb-2">CLASSIFIED ACCESS</div>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]">
+            WHALE OPS
+          </h1>
+        </motion.div>
+
+        {/* Password Input */}
+        <AnimatePresence mode="wait">
+          {!isUnlocking ? (
+            <motion.form
+              key="password-form"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              onSubmit={handleSubmit}
+              className="flex flex-col items-center gap-4"
+            >
+              <div className="text-xs font-bold tracking-[0.3em] text-white/50 mb-2">
+                ENTER ACCESS CODE
+              </div>
+              
+              <div className={`relative ${error ? 'animate-shake' : ''}`}>
+                {/* Corner accents */}
+                <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cod-orange" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cod-orange" />
+                <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cod-orange" />
+                <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cod-orange" />
+                
+                <input
+                  ref={inputRef}
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="••••••••"
+                  className={`
+                    w-64 px-6 py-3 bg-black/80 border-2 text-center font-mono text-lg tracking-[0.3em]
+                    focus:outline-none focus:border-cod-orange transition-all
+                    ${error ? 'border-red-500 text-red-400' : 'border-white/20 text-white'}
+                  `}
+                />
+              </div>
+
+              {error && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-red-500 text-xs font-bold tracking-widest"
+                >
+                  ACCESS DENIED
+                </motion.div>
+              )}
+
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-4 px-8 py-3 bg-cod-orange/20 border border-cod-orange/50 text-cod-orange font-bold tracking-[0.2em] text-sm hover:bg-cod-orange/30 hover:border-cod-orange transition-all"
+              >
+                CONTINUE
+              </motion.button>
+
+              <div className="mt-6 text-xs text-white/30 tracking-widest">
+                PRESS ENTER TO SUBMIT
+              </div>
+            </motion.form>
+          ) : (
+            <motion.div
+              key="unlocking"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex flex-col items-center gap-4"
+            >
+              <motion.div
+                animate={{ 
+                  opacity: [1, 0.5, 1],
+                  scale: [1, 1.02, 1]
+                }}
+                transition={{ duration: 0.5, repeat: Infinity }}
+                className="text-cod-green text-lg font-bold tracking-[0.3em]"
+              >
+                ACCESS GRANTED
+              </motion.div>
+              <div className="w-48 h-1 bg-white/10 overflow-hidden">
+                <motion.div
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "100%" }}
+                  transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+                  className="w-full h-full bg-gradient-to-r from-transparent via-cod-green to-transparent"
+                />
+              </div>
+              <div className="text-xs text-white/50 tracking-widest">
+                INITIALIZING TACTICAL INTERFACE...
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Bottom info */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-6 left-0 right-0 flex justify-between items-center px-8 text-xs text-white/30 tracking-widest"
+        >
+          <div>WHALE OPS™ v1.0</div>
+          <div>CLASSIFIED // TOP SECRET</div>
+        </motion.div>
+      </div>
+
+      {/* CSS for shake animation */}
+      <style>{`
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+          20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        .animate-shake {
+          animation: shake 0.5s ease-in-out;
+        }
+      `}</style>
+    </div>
+  );
+}
