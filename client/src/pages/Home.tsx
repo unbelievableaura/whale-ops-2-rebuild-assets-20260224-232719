@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Menu Items Data
 const MENU_ITEMS = [
-  { id: "start", label: "START GAME", active: false, link: "/fps" },
+  { id: "start", label: "START GAME", active: false },
   { id: "twitter", label: "X", active: false, link: "https://twitter.com" },
   { id: "dexscreener", label: "DEXSCREENER", active: false, link: "https://dexscreener.com" },
   { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun" },
