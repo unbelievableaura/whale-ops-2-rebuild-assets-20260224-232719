@@ -172,11 +172,11 @@ export default function Emotes() {
         </div>
 
         {/* Main Layout */}
-        <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <div className="flex-1 flex flex-col lg:flex-row gap-4 lg:gap-8 items-center justify-start lg:justify-center">
           
           {/* Video Preview Panel - Shows image preview, plays video on click */}
-          <div className="lg:w-2/3 flex flex-col">
-            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-4xl mx-auto w-full">
+          <div className="w-full lg:w-2/3 flex flex-col">
+            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group lg:max-w-4xl mx-auto w-full">
               {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cod-orange z-20" />
@@ -275,10 +275,10 @@ export default function Emotes() {
           </div>
 
           {/* Emote Buttons - Vertical on the right */}
-          <div className="lg:w-1/3 flex flex-col items-center lg:items-start gap-4">
-            <h3 className="text-lg font-bold tracking-widest text-white/60 mb-2">AVAILABLE EMOTES</h3>
+          <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start gap-2 lg:gap-4">
+            <h3 className="text-sm lg:text-lg font-bold tracking-widest text-white/60 mb-1 lg:mb-2">AVAILABLE EMOTES</h3>
             
-            <div className="grid grid-cols-2 gap-2 sm:gap-4">
+            <div className="grid grid-cols-3 lg:grid-cols-2 gap-2 sm:gap-4 w-full">
               {EMOTES.map((emote, index) => (
                 <motion.button
                   key={emote.id}
@@ -289,7 +289,7 @@ export default function Emotes() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleEmoteClick(emote)}
                   className={`
-                    relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 bg-black/60 border-2 transition-all duration-300 overflow-hidden group
+                    relative w-full aspect-square bg-black/60 border-2 transition-all duration-300 overflow-hidden group
                     ${selectedEmote?.id === emote.id 
                       ? 'border-cod-orange shadow-[0_0_30px_rgba(255,149,0,0.4)]' 
                       : queuedEmote?.id === emote.id
