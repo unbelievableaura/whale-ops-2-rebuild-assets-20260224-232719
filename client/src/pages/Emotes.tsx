@@ -322,7 +322,7 @@ export default function Emotes() {
           </div>
           
           <div className="text-xs font-mono text-white/30 tracking-widest">
-            WHALE OPS™ EMOTE SYSTEM v2.1
+            2025 WHALE OPS
           </div>
         </div>
       </div>
