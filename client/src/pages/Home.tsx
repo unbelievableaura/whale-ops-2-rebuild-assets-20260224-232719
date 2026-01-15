@@ -313,6 +313,38 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Trailer Preview - Bottom Right */}
+      <div className="hidden md:block absolute bottom-20 right-6 z-30">
+        <div className="relative group cursor-pointer">
+          {/* Corner Accents */}
+          <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cod-orange z-20" />
+          <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cod-orange z-20" />
+          <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cod-orange z-20" />
+          <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cod-orange z-20" />
+          
+          {/* Video Container */}
+          <div className="w-48 aspect-video bg-black/80 border border-white/20 overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+            >
+              <source src="/images/trailer.mp4" type="video/mp4" />
+            </video>
+            
+            {/* Scanline overlay */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_2px] pointer-events-none" />
+          </div>
+          
+          {/* Label */}
+          <div className="absolute -bottom-5 left-0 right-0 text-center">
+            <span className="text-[9px] font-bold tracking-[0.2em] text-white/50 uppercase">Trailer</span>
+          </div>
+        </div>
+      </div>
+
       {/* Glitch Overlay Effect */}
       {showGlitch && (
         <div className="absolute inset-0 z-50 pointer-events-none mix-blend-color-dodge opacity-50">
