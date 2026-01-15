@@ -171,12 +171,12 @@ export default function Emotes() {
           </Link>
         </div>
 
-        {/* Main Layout - Mobile optimized */}
-        <div className="flex-1 flex flex-col gap-4 sm:gap-8 items-center justify-start lg:justify-center overflow-y-auto">
+        {/* Main Layout */}
+        <div className="flex-1 flex flex-col lg:flex-row gap-8 items-center justify-center">
           
           {/* Video Preview Panel - Shows image preview, plays video on click */}
-          <div className="w-full lg:w-2/3 flex flex-col">
-            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-full lg:max-w-4xl mx-auto w-full min-h-[200px] sm:min-h-[300px]">
+          <div className="lg:w-2/3 flex flex-col">
+            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-4xl mx-auto w-full">
               {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cod-orange z-20" />
@@ -200,6 +200,7 @@ export default function Emotes() {
                     className="absolute inset-0 w-full h-full object-cover"
                     onEnded={handleVideoEnd}
                     autoPlay
+                    muted
                     playsInline
                   >
                     <source src={selectedEmote.video} type="video/mp4" />
@@ -246,21 +247,21 @@ export default function Emotes() {
             </div>
 
             {/* Emote Info Box - Always visible */}
-            <div className="mt-2 sm:mt-4 p-2 sm:p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
+            <div className="mt-4 p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
               <div className="flex justify-between items-center">
                 <div>
-                  <h2 className="text-sm sm:text-xl lg:text-2xl font-black tracking-wide">
+                  <h2 className="text-2xl font-black tracking-wide">
                     {selectedEmote ? selectedEmote.name : "NO EMOTE SELECTED"}
                   </h2>
                   <div 
-                    className="text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] mt-0.5 sm:mt-1"
+                    className="text-xs font-bold tracking-[0.3em] mt-1"
                     style={{ color: selectedEmote ? selectedEmote.color : '#666' }}
                   >
                     {selectedEmote ? selectedEmote.rarity : "SELECT AN EMOTE"}
                   </div>
                 </div>
                 {/* Status indicator instead of replay button */}
-                <div className="text-[10px] sm:text-xs font-bold tracking-widest text-white/40">
+                <div className="text-xs font-bold tracking-widest text-white/40">
                   {isPlaying ? (
                     <span className="text-cod-green">● PLAYING</span>
                   ) : selectedEmote ? (
@@ -273,11 +274,11 @@ export default function Emotes() {
             </div>
           </div>
 
-          {/* Emote Buttons - Grid layout optimized for mobile */}
-          <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start gap-2 sm:gap-4 pb-8">
-            <h3 className="text-sm sm:text-lg font-bold tracking-widest text-white/60 mb-1 sm:mb-2">AVAILABLE EMOTES</h3>
+          {/* Emote Buttons - Vertical on the right */}
+          <div className="lg:w-1/3 flex flex-col items-center lg:items-start gap-4">
+            <h3 className="text-lg font-bold tracking-widest text-white/60 mb-2">AVAILABLE EMOTES</h3>
             
-            <div className="grid grid-cols-3 sm:grid-cols-2 gap-2 sm:gap-4 w-full max-w-sm lg:max-w-none">
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
               {EMOTES.map((emote, index) => (
                 <motion.button
                   key={emote.id}
@@ -302,13 +303,11 @@ export default function Emotes() {
                     style={{ backgroundColor: emote.color }}
                   />
                   
-                  {/* Video thumbnail - shows first frame */}
-                  <video 
-                    src={emote.video}
+                  {/* Preview Image as thumbnail */}
+                  <img 
+                    src={emote.preview} 
+                    alt={emote.name}
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
-                    muted
-                    playsInline
-                    preload="metadata"
                   />
 
                   {/* Queued badge */}
