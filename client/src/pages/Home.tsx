@@ -8,7 +8,7 @@ const MENU_ITEMS = [
   { id: "start", label: "START GAME", active: false, locked: true, tooltip: "COMING SOON" },
   { id: "emotes", label: "EMOTES", active: false, link: "/emotes" },
   { id: "roadmap", label: "ROADMAP", active: false, link: "/roadmap" },
-  { id: "twitter", label: "X", active: false, link: "https://twitter.com" },
+  { id: "twitter", label: "X", active: false, link: "https://x.com/BlackOpsWhale" },
   { id: "dexscreener", label: "DEXSCREENER", active: false, link: "https://dexscreener.com" },
   { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun" },
 ];

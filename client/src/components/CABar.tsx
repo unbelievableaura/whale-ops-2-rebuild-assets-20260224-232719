@@ -3,6 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function CABar() {
   const [showCABar, setShowCABar] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  const contractAddress = "Not released yet";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contractAddress);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   if (!showCABar) return null;
 
@@ -16,14 +25,36 @@ export default function CABar() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cod-orange/20 via-cod-orange/10 to-cod-orange/20 border-b border-cod-orange/30 backdrop-blur-sm"
         >
-          <div className="flex items-center justify-center gap-2 sm:gap-4 py-1 px-2 sm:px-4">
-            {/* Status Message */}
+          <div className="flex items-center justify-center gap-2 sm:gap-4 py-1.5 px-2 sm:px-4">
+            {/* Contract Address */}
             <div className="flex items-center gap-1 sm:gap-3">
-              <span className="text-[10px] sm:text-xs font-bold tracking-[0.1em] sm:tracking-[0.2em] text-cod-orange">STATUS:</span>
-              <span className="text-[10px] sm:text-xs font-mono text-white/80 tracking-wider">NOT OFFICIALLY LAUNCHED</span>
+              <span className="text-[10px] sm:text-xs font-bold tracking-[0.1em] sm:tracking-[0.2em] text-cod-orange">CONTRACT ADDRESS:</span>
+              <span className="text-[10px] sm:text-xs font-mono text-white/80 tracking-wider">{contractAddress}</span>
             </div>
             
-            {/* Close Button */}
+            {/* Copy Button */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={handleCopy}
+              className="ml-1 sm:ml-2 px-2 py-0.5 bg-cod-orange/20 border border-cod-orange/40 hover:bg-cod-orange/30 transition-colors flex items-center gap-1"
+            >
+              {copied ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-cod-green">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-cod-orange">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              )}
+              <span className="text-[10px] sm:text-xs font-bold tracking-wider text-cod-orange">
+                {copied ? "COPIED" : "COPY"}
+              </span>
+            </motion.button>
+            
+            {/* Close Button (X) */}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
