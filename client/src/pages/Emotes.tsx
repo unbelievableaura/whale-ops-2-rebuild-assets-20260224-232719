@@ -86,7 +86,7 @@ export default function Emotes() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
+    <div className="relative w-full min-h-screen lg:h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
       {/* CA Bar Component */}
       <CABar />
 
@@ -120,7 +120,7 @@ export default function Emotes() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full h-screen flex flex-col p-4 sm:p-6 md:p-12 overflow-y-auto">
+      <div className="relative z-10 w-full min-h-screen lg:h-screen flex flex-col p-4 sm:p-6 md:p-12 overflow-y-auto">
         
         {/* Header */}
         <div className="flex justify-between items-start mb-8 mt-8">
@@ -147,7 +147,7 @@ export default function Emotes() {
           
           {/* Video Preview Panel - Shows image preview, plays video on click */}
           <div className="w-full lg:w-2/3 flex flex-col">
-            <div className="relative bg-black/80 border-2 border-white/10 overflow-hidden group lg:max-w-4xl mx-auto w-full" style={{ aspectRatio: '16/9' }}>
+            <div className="video-container relative bg-black/80 border-2 border-white/10 overflow-hidden group lg:max-w-4xl mx-auto w-full h-[200px] sm:h-[300px] lg:aspect-video lg:h-auto">
               {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cod-orange z-20" />
@@ -209,10 +209,10 @@ export default function Emotes() {
             </div>
 
             {/* Emote Info Box - Always visible */}
-            <div className="mt-4 p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
+            <div className="mt-2 sm:mt-4 p-2 sm:p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
               <div className="flex justify-between items-center">
                 <div>
-                  <h2 className="text-2xl font-black tracking-wide">
+                  <h2 className="text-base sm:text-2xl font-black tracking-wide">
                     {selectedEmote ? selectedEmote.name : "NO EMOTE SELECTED"}
                   </h2>
                   <div 
