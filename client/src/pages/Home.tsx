@@ -176,7 +176,7 @@ export default function Home() {
         <div className="flex-1 flex items-center pb-0 md:pb-[229px]">
           <div className="flex gap-4 items-start relative">
             {/* Main Menu List */}
-            <div className="flex flex-col gap-3 sm:gap-4 w-full md:w-72 pl-0 md:pl-4">
+            <div className="flex flex-col gap-3 sm:gap-4 w-full md:w-72 pl-0 md:pl-4" style={{paddingTop: '49px'}}>
               {MENU_ITEMS.map((item, index) => (
                 <motion.div
                   key={item.id}
@@ -202,7 +202,7 @@ export default function Home() {
                       <TooltipTrigger asChild>
                         <span
                           className={`
-                            text-[16px] sm:text-[18px] font-bold uppercase tracking-wide cursor-not-allowed transition-all duration-300 block opacity-40
+                            text-[18px] sm:text-[20px] font-bold uppercase tracking-wide cursor-not-allowed transition-all duration-300 block opacity-40
                             ${activeMenu === item.id 
                               ? 'text-white/60' 
                               : 'text-white/30'}
@@ -221,7 +221,7 @@ export default function Home() {
                       target={item.link && !item.link.startsWith("/") ? "_blank" : undefined}
                       rel={item.link && !item.link.startsWith("/") ? "noopener noreferrer" : undefined}
                       className={`
-                        text-[16px] sm:text-[18px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 block
+                        text-[18px] sm:text-[20px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 block
                         ${activeMenu === item.id 
                           ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] scale-105 origin-left' 
                           : 'text-white/40 hover:text-white/80'}
