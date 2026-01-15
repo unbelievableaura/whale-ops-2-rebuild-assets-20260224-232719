@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CABar from "@/components/CABar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -19,6 +19,8 @@ export default function Home() {
   const [showGlitch, setShowGlitch] = useState(false);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [uiVisible, setUiVisible] = useState(true);
+  const [showTrailerModal, setShowTrailerModal] = useState(false);
+  const trailerModalRef = useRef<HTMLVideoElement>(null);
 
   const BACKGROUND_VIDEOS = [
     "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43817.mp4",
@@ -314,16 +316,19 @@ export default function Home() {
       </div>
 
       {/* Trailer Preview - Bottom Right */}
-      <div className="hidden md:block absolute bottom-20 right-6 z-30">
-        <div className="relative group cursor-pointer">
+      <div className="hidden md:block absolute bottom-36 right-6 z-30">
+        <div 
+          className="relative group cursor-pointer"
+          onClick={() => setShowTrailerModal(true)}
+        >
           {/* Corner Accents */}
-          <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cod-orange z-20" />
-          <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cod-orange z-20" />
-          <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cod-orange z-20" />
-          <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cod-orange z-20" />
+          <div className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-cod-orange z-20" />
+          <div className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-cod-orange z-20" />
+          <div className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-cod-orange z-20" />
+          <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-cod-orange z-20" />
           
           {/* Video Container */}
-          <div className="w-48 aspect-video bg-black/80 border border-white/20 overflow-hidden">
+          <div className="w-[400px] aspect-video bg-black/80 border border-white/20 overflow-hidden relative">
             <video
               autoPlay
               loop
@@ -334,16 +339,85 @@ export default function Home() {
               <source src="/images/trailer.mp4" type="video/mp4" />
             </video>
             
+            {/* Play icon overlay */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="w-16 h-16 rounded-full bg-black/60 border-2 border-cod-orange flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-cod-orange ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+            
             {/* Scanline overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_2px] pointer-events-none" />
           </div>
           
           {/* Label */}
-          <div className="absolute -bottom-5 left-0 right-0 text-center">
-            <span className="text-[9px] font-bold tracking-[0.2em] text-white/50 uppercase">Trailer</span>
+          <div className="absolute -bottom-6 left-0 right-0 text-center">
+            <span className="text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase">Click to Watch Trailer</span>
           </div>
         </div>
       </div>
+
+      {/* Trailer Modal Overlay */}
+      <AnimatePresence>
+        {showTrailerModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90"
+            onClick={() => setShowTrailerModal(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: "spring", damping: 25 }}
+              className="relative w-[90vw] max-w-5xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Corner Accents */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-cod-orange z-20" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-cod-orange z-20" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-cod-orange z-20" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-cod-orange z-20" />
+              
+              {/* Close Button */}
+              <button
+                onClick={() => setShowTrailerModal(false)}
+                className="absolute -top-12 right-0 flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+              >
+                <span className="text-xs font-bold tracking-widest">CLOSE</span>
+                <div className="w-8 h-8 rounded-full border border-white/40 flex items-center justify-center hover:border-cod-orange hover:text-cod-orange transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+              </button>
+              
+              {/* Video Container */}
+              <div className="aspect-video bg-black border-2 border-white/20 overflow-hidden">
+                <video
+                  ref={trailerModalRef}
+                  autoPlay
+                  controls
+                  playsInline
+                  className="w-full h-full object-contain"
+                >
+                  <source src="/images/trailer.mp4" type="video/mp4" />
+                </video>
+              </div>
+              
+              {/* Title */}
+              <div className="mt-4 text-center">
+                <h3 className="text-xl font-black tracking-widest text-white">WHALE OPS TRAILER</h3>
+                <p className="text-xs font-bold tracking-[0.2em] text-cod-orange mt-1">OFFICIAL PREVIEW</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Glitch Overlay Effect */}
       {showGlitch && (
