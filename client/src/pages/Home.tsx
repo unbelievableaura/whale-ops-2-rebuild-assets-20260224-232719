@@ -116,9 +116,10 @@ export default function Home() {
             autoPlay
             loop
             playsInline
-            className={`h-full object-cover absolute inset-0 w-[calc(100%+120px)] -left-[120px] md:w-full md:left-0 ${
+            className={`w-full h-full object-cover absolute inset-0 ${
               currentVideoIndex === 1 || currentVideoIndex === 2 || currentVideoIndex === 3 ? "scale-x-[-1]" : ""
             }`}
+            style={{ objectPosition: '35% center' }}
           >
             <source src={BACKGROUND_VIDEOS[currentVideoIndex]} type="video/mp4" />
           </motion.video>
