@@ -236,7 +236,7 @@ export default function Home() {
                           </span>
                         </a>
                       </TooltipTrigger>
-                      <TooltipContent side="right" className="bg-black/90 border-cod-green text-cod-green font-bold tracking-widest text-xs animate-pulse">
+                      <TooltipContent side="right" className="bg-black/90 border-cod-red text-cod-red font-bold tracking-widest text-xs animate-pulse">
                         LIVE NOW
                       </TooltipContent>
                     </Tooltip>
