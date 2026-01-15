@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import BackgroundMusic from "./components/BackgroundMusic";
 import Loading from "./pages/Loading";
 import Home from "./pages/Home";
 import Emotes from "./pages/Emotes";
@@ -53,6 +54,7 @@ function App() {
         >
           <TooltipProvider>
             <Toaster />
+            <BackgroundMusic />
             <Router />
           </TooltipProvider>
         </ThemeProvider>
