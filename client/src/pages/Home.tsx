@@ -140,7 +140,7 @@ export default function Home() {
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
               {/* Stacked logo for mobile */}
               <img 
-                src="/images/whale-ops-logo-stacked.svg" 
+                src="/images/whale-ops-logo-mobile.svg" 
                 alt="WHALE OPS" 
                 className="md:hidden w-full max-w-[280px] h-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] mix-blend-screen"
                 style={{paddingTop: '12px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))'}}
