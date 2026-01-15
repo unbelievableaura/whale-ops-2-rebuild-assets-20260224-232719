@@ -120,7 +120,7 @@ export default function Loading() {
       <div className="absolute inset-0 z-15 pointer-events-none opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
       {/* Main Content */}
-      <div className="relative z-30 w-full h-screen flex flex-col items-center justify-end pb-24">
+      <div className="relative z-30 w-full h-screen flex flex-col items-center justify-center">
         
         {/* Title */}
         <motion.div
