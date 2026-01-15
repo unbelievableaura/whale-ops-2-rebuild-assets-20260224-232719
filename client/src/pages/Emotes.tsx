@@ -200,7 +200,6 @@ export default function Emotes() {
                     className="absolute inset-0 w-full h-full object-cover"
                     onEnded={handleVideoEnd}
                     autoPlay
-                    muted
                     playsInline
                   >
                     <source src={selectedEmote.video} type="video/mp4" />
@@ -278,7 +277,7 @@ export default function Emotes() {
           <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start gap-2 lg:gap-4">
             <h3 className="text-sm lg:text-lg font-bold tracking-widest text-white/60 mb-1 lg:mb-2">AVAILABLE EMOTES</h3>
             
-            <div className="grid grid-cols-3 lg:grid-cols-2 gap-2 sm:gap-4 w-full">
+            <div className="grid grid-cols-3 lg:grid-cols-2 gap-2 sm:gap-4 w-full lg:w-auto">
               {EMOTES.map((emote, index) => (
                 <motion.button
                   key={emote.id}
@@ -289,7 +288,7 @@ export default function Emotes() {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleEmoteClick(emote)}
                   className={`
-                    relative w-full aspect-square bg-black/60 border-2 transition-all duration-300 overflow-hidden group
+                    relative w-full lg:w-40 aspect-square bg-black/60 border-2 transition-all duration-300 overflow-hidden group
                     ${selectedEmote?.id === emote.id 
                       ? 'border-cod-orange shadow-[0_0_30px_rgba(255,149,0,0.4)]' 
                       : queuedEmote?.id === emote.id
