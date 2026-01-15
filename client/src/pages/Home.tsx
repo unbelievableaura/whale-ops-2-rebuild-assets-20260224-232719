@@ -170,7 +170,7 @@ export default function Home() {
         </div>
 
         {/* Middle Section - Menu */}
-        <div className="flex-1 flex items-center" style={{paddingBottom: '138px'}}>
+        <div className="flex-1 flex items-center pb-0 md:pb-[229px]">
           <div className="flex gap-4 items-start relative">
             {/* Main Menu List */}
             <div className="flex flex-col gap-3 sm:gap-4 w-full md:w-72 pl-0 md:pl-4">
