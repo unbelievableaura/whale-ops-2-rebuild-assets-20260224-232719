@@ -5,7 +5,7 @@ export default function CABar() {
   const [showCABar, setShowCABar] = useState(true);
   const [copied, setCopied] = useState(false);
 
-  const contractAddress = "Not released yet";
+  const contractAddress = "UNRELEASED";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(contractAddress);
@@ -25,11 +25,11 @@ export default function CABar() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cod-orange/20 via-cod-orange/10 to-cod-orange/20 border-b border-cod-orange/30 backdrop-blur-sm"
         >
-          <div className="flex items-center justify-center gap-2 sm:gap-4 py-1.5 px-2 sm:px-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 py-2.5 px-2 sm:px-4">
             {/* Contract Address */}
             <div className="flex items-center gap-1 sm:gap-3">
-              <span className="text-[10px] sm:text-xs font-bold tracking-[0.1em] sm:tracking-[0.2em] text-cod-orange">CONTRACT ADDRESS:</span>
-              <span className="text-[10px] sm:text-xs font-mono text-white/80 tracking-wider">{contractAddress}</span>
+              <span className="text-[12px] sm:text-sm font-bold tracking-[0.1em] sm:tracking-[0.2em] text-cod-orange uppercase">CONTRACT ADDRESS:</span>
+              <span className="text-[12px] sm:text-sm font-mono text-white/80 tracking-wider uppercase">{contractAddress}</span>
             </div>
             
             {/* Copy Button */}
@@ -49,7 +49,7 @@ export default function CABar() {
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
               )}
-              <span className="text-[10px] sm:text-xs font-bold tracking-wider text-cod-orange">
+              <span className="text-[12px] sm:text-sm font-bold tracking-wider text-cod-orange uppercase">
                 {copied ? "COPIED" : "COPY"}
               </span>
             </motion.button>

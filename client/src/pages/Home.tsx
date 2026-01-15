@@ -10,7 +10,7 @@ const MENU_ITEMS = [
   { id: "roadmap", label: "ROADMAP", active: false, link: "/roadmap" },
   { id: "twitter", label: "X", active: false, link: "https://x.com/BlackOpsWhale" },
   { id: "dexscreener", label: "DEXSCREENER", active: false, link: "https://dexscreener.com" },
-  { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun" },
+  { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun", live: true },
 ];
 
 export default function Home() {
@@ -213,6 +213,31 @@ export default function Home() {
                       </TooltipTrigger>
                       <TooltipContent side="right" className="bg-black/90 border-cod-orange text-cod-orange font-bold tracking-widest text-xs">
                         {item.tooltip}
+                      </TooltipContent>
+                    </Tooltip>
+                  ) : item.live ? (
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a 
+                          href={item.link}
+                          target={item.link && !item.link.startsWith("/") ? "_blank" : undefined}
+                          rel={item.link && !item.link.startsWith("/") ? "noopener noreferrer" : undefined}
+                          className={`
+                            text-[20px] sm:text-[22px] font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 flex items-center gap-2
+                            ${activeMenu === item.id 
+                              ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] scale-105 origin-left' 
+                              : 'text-white/40 hover:text-white/80'}
+                          `}
+                        >
+                          {item.label}
+                          <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cod-green opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-cod-green"></span>
+                          </span>
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent side="right" className="bg-black/90 border-cod-green text-cod-green font-bold tracking-widest text-xs animate-pulse">
+                        LIVE NOW
                       </TooltipContent>
                     </Tooltip>
                   ) : (
