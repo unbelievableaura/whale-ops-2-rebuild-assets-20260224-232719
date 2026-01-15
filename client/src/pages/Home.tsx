@@ -156,15 +156,15 @@ export default function Home() {
           </div>
           
           {/* Player Info */}
-          <div className="flex flex-col items-start md:items-end gap-1 w-full md:w-auto">
-            <div className="flex items-center gap-2 bg-black/80 px-4 py-1 backdrop-blur-md">
+          <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
+            <div className="flex items-center gap-2 bg-black/80 px-4 py-1 backdrop-blur-md whitespace-nowrap">
               <span className="text-sm font-bold tracking-widest text-white/90">1 Players (18 Max)</span>
             </div>
-            <div className="text-left md:text-right">
-              <div className="text-cod-green font-bold text-xl tracking-wide drop-shadow-[0_0_5px_rgba(0,255,0,0.5)]" style={{paddingTop: '7px'}}>
-                [Whale] THE WHITE WALE
+            <div className="text-left md:text-right flex flex-col gap-2">
+              <div className="text-cod-green font-bold text-xl tracking-wide drop-shadow-[0_0_5px_rgba(0,255,0,0.5)] whitespace-nowrap">
+                [Whale] THE WHITE WHALE
               </div>
-              <div className="text-xs text-white/50 tracking-wider uppercase hidden md:block">Add controller for Split Screen</div>
+              <div className="text-xs text-white/50 tracking-wider uppercase hidden md:block whitespace-nowrap">Add controller for Split Screen</div>
             </div>
           </div>
         </div>
