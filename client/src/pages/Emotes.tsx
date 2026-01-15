@@ -6,6 +6,14 @@ import CABar from "@/components/CABar";
 // Emotes with provided videos
 const EMOTES = [
   { 
+    id: "emote_0", 
+    name: "OPERATOR INTRO", 
+    video: "/images/emote-intro.mp4",
+    preview: "/images/emotes_bg.png",
+    rarity: "LEGENDARY",
+    color: "#ff9500"
+  },
+  { 
     id: "emote_1", 
     name: "TACTICAL STANCE", 
     video: "/images/emote_1.mp4",
