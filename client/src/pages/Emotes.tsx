@@ -7,7 +7,7 @@ import CABar from "@/components/CABar";
 const EMOTES = [
   { 
     id: "emote_0", 
-    name: "OPERATOR INTRO", 
+    name: "VIOLENCE", 
     video: "/images/emote-intro.mp4",
     preview: "/images/emotes_bg.png",
     rarity: "LEGENDARY",
