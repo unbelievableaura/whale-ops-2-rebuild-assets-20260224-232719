@@ -291,7 +291,7 @@ export default function Emotes() {
             </div>
 
             {/* Rarity Legend */}
-            <div className="mt-6 flex flex-col gap-2 text-xs font-bold tracking-widest">
+            <div className="mt-6 flex flex-row flex-wrap gap-4 sm:gap-6 text-xs font-bold tracking-widest">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-[#ff9500]" />
                 <span className="text-white/60">LEGENDARY</span>
