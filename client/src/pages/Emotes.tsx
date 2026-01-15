@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import CABar from "@/components/CABar";
@@ -58,61 +58,32 @@ const EMOTES = [
 export default function Emotes() {
   const [selectedEmote, setSelectedEmote] = useState<typeof EMOTES[0] | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [queuedEmote, setQueuedEmote] = useState<typeof EMOTES[0] | null>(null);
+  const [videoKey, setVideoKey] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const playPromiseRef = useRef<Promise<void> | null>(null);
 
-  const handleEmoteClick = (emote: typeof EMOTES[0]) => {
-    // If currently playing, queue the emote to play after current one finishes
-    if (isPlaying) {
-      setQueuedEmote(emote);
-    } else {
-      // Not playing, start immediately
-      setSelectedEmote(emote);
-      setIsPlaying(true);
-    }
-  };
+  const handleEmoteClick = useCallback((emote: typeof EMOTES[0]) => {
+    // Always switch to the new emote immediately
+    setSelectedEmote(emote);
+    setIsPlaying(true);
+    // Increment key to force video element to remount and play fresh
+    setVideoKey(prev => prev + 1);
+  }, []);
 
-  const handleVideoEnd = () => {
-    // Check if there's a queued emote
-    if (queuedEmote) {
-      const nextEmote = queuedEmote;
-      setQueuedEmote(null);
-      setSelectedEmote(nextEmote);
-      // isPlaying stays true, useEffect will handle the new video
-    } else {
-      setIsPlaying(false);
-    }
-  };
+  const handleVideoEnd = useCallback(() => {
+    setIsPlaying(false);
+  }, []);
 
-  // Play video when emote is selected - properly handle async play
-  useEffect(() => {
+  const handleVideoCanPlay = useCallback(() => {
+    // When video is ready to play, start it
     const video = videoRef.current;
-    if (video && selectedEmote && isPlaying) {
-      video.currentTime = 0;
-      // Store the play promise to handle interruptions gracefully
-      playPromiseRef.current = video.play();
-      playPromiseRef.current.catch((error) => {
-        // Only log if it's not an abort error (which happens when video is removed)
+    if (video) {
+      video.play().catch((error) => {
         if (error.name !== 'AbortError') {
           console.error('Video play error:', error);
         }
       });
     }
-    
-    // Cleanup: pause video if component unmounts or video changes
-    return () => {
-      if (playPromiseRef.current) {
-        playPromiseRef.current.then(() => {
-          if (video) {
-            video.pause();
-          }
-        }).catch(() => {
-          // Ignore errors during cleanup
-        });
-      }
-    };
-  }, [selectedEmote, isPlaying]);
+  }, []);
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
@@ -195,15 +166,15 @@ export default function Emotes() {
                 {/* Video layer - positioned on top when playing */}
                 {selectedEmote && isPlaying && (
                   <video
-                    key={`${selectedEmote.id}-video`}
+                    key={`video-${videoKey}`}
                     ref={videoRef}
                     className="absolute inset-0 w-full h-full object-cover"
                     onEnded={handleVideoEnd}
-                    autoPlay
+                    onCanPlay={handleVideoCanPlay}
                     playsInline
-                  >
-                    <source src={selectedEmote.video} type="video/mp4" />
-                  </video>
+                    preload="auto"
+                    src={selectedEmote.video}
+                  />
                 )}
                 
                 {/* Preview image layer - shows when emote selected but not playing */}
@@ -230,14 +201,6 @@ export default function Emotes() {
                 <div className="absolute top-4 left-4 flex items-center gap-2 bg-black/80 px-3 py-1 z-20">
                   <div className="w-2 h-2 bg-cod-green rounded-full animate-pulse" />
                   <span className="text-xs font-bold tracking-widest text-cod-green">PLAYING</span>
-                </div>
-              )}
-
-              {/* Queued Indicator */}
-              {queuedEmote && (
-                <div className="absolute top-4 right-4 flex items-center gap-2 bg-black/80 px-3 py-1 z-20">
-                  <div className="w-2 h-2 bg-cod-orange rounded-full animate-pulse" />
-                  <span className="text-xs font-bold tracking-widest text-cod-orange">NEXT: {queuedEmote.name}</span>
                 </div>
               )}
 
@@ -291,9 +254,7 @@ export default function Emotes() {
                     relative w-full lg:w-40 aspect-square bg-black/60 border-2 transition-all duration-300 overflow-hidden group
                     ${selectedEmote?.id === emote.id 
                       ? 'border-cod-orange shadow-[0_0_30px_rgba(255,149,0,0.4)]' 
-                      : queuedEmote?.id === emote.id
-                        ? 'border-cod-orange/50 shadow-[0_0_15px_rgba(255,149,0,0.2)]'
-                        : 'border-white/10 hover:border-white/30'}
+                      : 'border-white/10 hover:border-white/30'}
                   `}
                 >
                   {/* Rarity indicator bar */}
@@ -308,13 +269,6 @@ export default function Emotes() {
                     alt={emote.name}
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity"
                   />
-
-                  {/* Queued badge */}
-                  {queuedEmote?.id === emote.id && (
-                    <div className="absolute top-2 right-2 bg-cod-orange/80 px-2 py-0.5 text-[10px] font-bold tracking-wider z-20">
-                      NEXT
-                    </div>
-                  )}
 
                   {/* Emote Name */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-3 z-10">
