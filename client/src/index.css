@@ -50,6 +50,10 @@
   --color-cod-red: oklch(0.60 0.25 25);
 }
 
+html {
+  font-size: 105%; /* Global 5% text size increase */
+}
+
 :root {
   /* COD Theme Colors */
   --cod-orange: #FF8C00;
