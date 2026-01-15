@@ -2,39 +2,42 @@ import { useEffect, useRef, useState } from "react";
 
 export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Start as playing
   const [volume, setVolume] = useState(0.3);
   const [showControls, setShowControls] = useState(false);
 
-  // Try to play audio when user interacts with the page
+  // Try to autoplay on mount
   useEffect(() => {
-    const handleInteraction = () => {
-      if (!hasInteracted) {
-        setHasInteracted(true);
-        const audio = audioRef.current;
-        if (audio) {
-          audio.volume = volume;
-          audio.play().then(() => {
-            setIsPlaying(true);
-          }).catch((error) => {
-            console.log('Audio autoplay blocked:', error);
-          });
-        }
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = volume;
+      // Try to play immediately
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          setIsPlaying(true);
+        }).catch((error) => {
+          // Autoplay was blocked, wait for user interaction
+          console.log('Autoplay blocked, waiting for interaction:', error);
+          setIsPlaying(false);
+          
+          const handleInteraction = () => {
+            audio.play().then(() => {
+              setIsPlaying(true);
+              // Remove listeners after successful play
+              document.removeEventListener('click', handleInteraction);
+              document.removeEventListener('keydown', handleInteraction);
+              document.removeEventListener('touchstart', handleInteraction);
+            }).catch(console.error);
+          };
+
+          document.addEventListener('click', handleInteraction);
+          document.addEventListener('keydown', handleInteraction);
+          document.addEventListener('touchstart', handleInteraction);
+        });
       }
-    };
-
-    // Listen for any user interaction
-    document.addEventListener('click', handleInteraction);
-    document.addEventListener('keydown', handleInteraction);
-    document.addEventListener('touchstart', handleInteraction);
-
-    return () => {
-      document.removeEventListener('click', handleInteraction);
-      document.removeEventListener('keydown', handleInteraction);
-      document.removeEventListener('touchstart', handleInteraction);
-    };
-  }, [hasInteracted, volume]);
+    }
+  }, []);
 
   // Update volume when slider changes
   useEffect(() => {
@@ -71,6 +74,7 @@ export default function BackgroundMusic() {
         src="/images/menu-theme.mp3"
         loop
         preload="auto"
+        autoPlay
       />
       
       {/* Sound Controls - Fixed position bottom left */}
