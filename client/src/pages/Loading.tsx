@@ -130,9 +130,9 @@ export default function Loading() {
           className="mb-8 text-center w-[90%] mx-auto"
         >
           <img 
-            src="/images/whale-ops-logo.svg" 
+            src="/images/whale-ops-logo-stacked.svg" 
             alt="WHALE OPS" 
-            className="w-full max-w-[800px] h-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] filter brightness-110 mx-auto mix-blend-screen"
+            className="w-full max-w-[400px] h-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] filter brightness-110 mx-auto mix-blend-screen"
             style={{ filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.3))' }}
           />
         </motion.div>
