@@ -246,21 +246,21 @@ export default function Emotes() {
             </div>
 
             {/* Emote Info Box - Always visible */}
-            <div className="mt-4 p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
+            <div className="mt-2 sm:mt-4 p-2 sm:p-4 bg-black/60 border border-white/10 max-w-4xl mx-auto w-full">
               <div className="flex justify-between items-center">
                 <div>
-                  <h2 className="text-2xl font-black tracking-wide">
+                  <h2 className="text-sm sm:text-xl lg:text-2xl font-black tracking-wide">
                     {selectedEmote ? selectedEmote.name : "NO EMOTE SELECTED"}
                   </h2>
                   <div 
-                    className="text-xs font-bold tracking-[0.3em] mt-1"
+                    className="text-[10px] sm:text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] mt-0.5 sm:mt-1"
                     style={{ color: selectedEmote ? selectedEmote.color : '#666' }}
                   >
                     {selectedEmote ? selectedEmote.rarity : "SELECT AN EMOTE"}
                   </div>
                 </div>
                 {/* Status indicator instead of replay button */}
-                <div className="text-xs font-bold tracking-widest text-white/40">
+                <div className="text-[10px] sm:text-xs font-bold tracking-widest text-white/40">
                   {isPlaying ? (
                     <span className="text-cod-green">● PLAYING</span>
                   ) : selectedEmote ? (
