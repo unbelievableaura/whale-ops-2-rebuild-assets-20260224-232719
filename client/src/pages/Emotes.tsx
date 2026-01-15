@@ -176,7 +176,7 @@ export default function Emotes() {
           
           {/* Video Preview Panel - Shows image preview, plays video on click */}
           <div className="w-full lg:w-2/3 flex flex-col">
-            <div className="relative aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-full lg:max-w-4xl mx-auto w-full">
+            <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-video bg-black/80 border-2 border-white/10 overflow-hidden group max-w-full lg:max-w-4xl mx-auto w-full">
               {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cod-orange z-20" />
               <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cod-orange z-20" />
