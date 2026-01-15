@@ -115,7 +115,6 @@ export default function Home() {
             transition={{ duration: 1.5, ease: "easeInOut" }}
             autoPlay
             loop
-            muted
             playsInline
             className={`w-full h-full object-cover absolute inset-0 ${
               currentVideoIndex === 1 || currentVideoIndex === 2 || currentVideoIndex === 3 ? "scale-x-[-1]" : ""
