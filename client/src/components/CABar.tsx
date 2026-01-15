@@ -16,7 +16,7 @@ export default function CABar() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-cod-orange/20 via-cod-orange/10 to-cod-orange/20 border-b border-cod-orange/30 backdrop-blur-sm"
         >
-          <div className="flex items-center justify-center gap-2 sm:gap-4 py-1 px-2 sm:px-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-4 py-2.5 px-2 sm:px-4">
             {/* Status Message */}
             <div className="flex items-center gap-1 sm:gap-3">
               <span className="text-[10px] sm:text-xs font-bold tracking-[0.1em] sm:tracking-[0.2em] text-cod-orange">STATUS:</span>
