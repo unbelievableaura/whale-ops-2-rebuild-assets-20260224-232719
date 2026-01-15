@@ -126,7 +126,7 @@ export default function Emotes() {
         <div className="flex justify-between items-start mb-8 mt-8">
           <div>
             <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">ARMORY</div>
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black tracking-wide font-black-ops text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]" style={{paddingTop: '8px'}}>
               EMOTES
             </h1>
           </div>
