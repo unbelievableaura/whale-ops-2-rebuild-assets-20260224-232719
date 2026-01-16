@@ -9,7 +9,7 @@ const MENU_ITEMS = [
   { id: "emotes", label: "EMOTES", active: false, link: "/emotes" },
   { id: "roadmap", label: "ROADMAP", active: false, link: "/roadmap" },
   { id: "twitter", label: "X", active: false, link: "https://x.com/BlackOpsWhale" },
-  { id: "dexscreener", label: "DEXSCREENER", active: false, link: "https://dexscreener.com" },
+  { id: "dexscreener", label: "DEXSCREENER", active: false, link: "https://dexscreener.com/solana/jbvuhtsgjqyzasalvd4bctucbrshxgkppzrbhgsjxc3x" },
   { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun/coin/2WXbVHpK2RqA5FcU7fNzpeUTNrNoSXqT93ziEJnMpump", live: true },
 ];
 
