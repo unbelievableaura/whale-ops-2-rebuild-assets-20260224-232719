@@ -1,19 +1,11 @@
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { useLocation } from "wouter";
-import { useAuth } from "@/contexts/AuthContext";
-
-// Password for access
-const ACCESS_PASSWORD = "alpha";
 
 export default function Loading() {
   const [, setLocation] = useLocation();
-  const { isAuthenticated, authenticate } = useAuth();
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
-  const [isUnlocking, setIsUnlocking] = useState(false);
   const [flickerIntensity, setFlickerIntensity] = useState(1);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [isEntering, setIsEntering] = useState(false);
 
   // Random flicker effect
   useEffect(() => {
@@ -25,47 +17,36 @@ export default function Loading() {
     return () => clearInterval(flickerInterval);
   }, []);
 
-  // Redirect to lobby if already authenticated
+  // Listen for any key press or click to enter
   useEffect(() => {
-    if (isAuthenticated) {
-      setLocation("/lobby");
-    }
-  }, [isAuthenticated, setLocation]);
+    const handleEnter = () => {
+      if (!isEntering) {
+        setIsEntering(true);
+        setTimeout(() => {
+          setLocation("/lobby");
+        }, 1500);
+      }
+    };
 
-  // Focus input on mount
-  useEffect(() => {
-    if (inputRef.current && !isAuthenticated) {
-      inputRef.current.focus();
-    }
-  }, [isAuthenticated]);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      handleEnter();
+    };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (password.toLowerCase() === ACCESS_PASSWORD.toLowerCase()) {
-      setIsUnlocking(true);
-      setError(false);
-      authenticate(); // Save authentication state
-      // Transition to lobby after unlock animation (3 seconds to show ACCESS GRANTED)
-      setTimeout(() => {
-        setLocation("/lobby");
-      }, 3000);
-    } else {
-      setError(true);
-      setPassword("");
-      // Shake animation handled by CSS
-      setTimeout(() => setError(false), 500);
-    }
-  };
+    const handleClick = () => {
+      handleEnter();
+    };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
-      handleSubmit(e);
-    }
-  };
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("click", handleClick);
+    };
+  }, [isEntering, setLocation]);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
+    <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none cursor-pointer">
       {/* Background Image with flicker */}
       <motion.div 
         className="absolute inset-0 z-0"
@@ -137,96 +118,54 @@ export default function Loading() {
           />
         </motion.div>
 
-        {/* Password Input */}
-        <AnimatePresence mode="wait">
-          {!isUnlocking ? (
-            <motion.form
-              key="password-form"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              onSubmit={handleSubmit}
-              className="flex flex-col items-center gap-4 w-full px-4"
-            >
-              <div className="text-xs font-bold tracking-[0.3em] text-white/50 mb-2">
-                ENTER ACCESS CODE
-              </div>
-              
-              <div className={`relative ${error ? 'animate-shake' : ''}`}>
-                {/* Corner accents */}
-                <div className="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cod-orange" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cod-orange" />
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cod-orange" />
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cod-orange" />
-                
-                <input
-                  ref={inputRef}
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  placeholder="••••••••"
-                  className={`
-                    w-full max-w-[280px] px-6 py-3 bg-black/80 border-2 text-center font-mono text-lg tracking-[0.3em]
-                    focus:outline-none focus:border-cod-orange transition-all
-                    ${error ? 'border-red-500 text-red-400' : 'border-white/20 text-white'}
-                  `}
-                />
-              </div>
-
-              {error && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-red-500 text-xs font-bold tracking-widest"
-                >
-                  ACCESS DENIED
-                </motion.div>
-              )}
-
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="mt-4 px-8 py-3 bg-cod-orange/20 border border-cod-orange/50 text-cod-orange font-bold tracking-[0.2em] text-sm hover:bg-cod-orange/30 hover:border-cod-orange transition-all"
-              >
-                CONTINUE
-              </motion.button>
-
-              <div className="mt-6 text-xs text-white/30 tracking-widest">
-                PRESS ENTER TO SUBMIT
-              </div>
-            </motion.form>
-          ) : (
+        {/* Press Enter Prompt */}
+        {!isEntering ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="flex flex-col items-center gap-4"
+          >
             <motion.div
-              key="unlocking"
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="text-sm sm:text-base font-bold tracking-[0.3em] text-white/70"
+            >
+              PRESS ANY KEY TO ENTER
+            </motion.div>
+            
+            <motion.div
+              animate={{ opacity: [0.3, 0.6, 0.3] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="text-xs text-white/40 tracking-widest"
+            >
+              OR CLICK ANYWHERE
+            </motion.div>
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex flex-col items-center gap-4"
+          >
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="flex flex-col items-center gap-4"
+              transition={{ duration: 0.5 }}
+              className="text-cod-green text-lg font-bold tracking-[0.3em]"
             >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="text-cod-green text-lg font-bold tracking-[0.3em]"
-              >
-                ACCESS GRANTED
-              </motion.div>
-              <div className="w-48 h-1 bg-cod-green/30 overflow-hidden mt-2">
-                <motion.div
-                  initial={{ width: "0%" }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 2.5, ease: "easeOut" }}
-                  className="h-full bg-cod-green"
-                />
-              </div>
-              <div className="text-xs text-white/50 tracking-widest">
-                INITIALIZING TACTICAL INTERFACE...
-              </div>
+              ENTERING
             </motion.div>
-          )}
-        </AnimatePresence>
+            <div className="w-48 h-1 bg-cod-green/30 overflow-hidden mt-2">
+              <motion.div
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                className="h-full bg-cod-green"
+              />
+            </div>
+          </motion.div>
+        )}
 
         {/* Bottom info */}
         <motion.div
@@ -239,18 +178,6 @@ export default function Loading() {
           <div></div>
         </motion.div>
       </div>
-
-      {/* CSS for shake animation */}
-      <style>{`
-        @keyframes shake {
-          0%, 100% { transform: translateX(0); }
-          10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-          20%, 40%, 60%, 80% { transform: translateX(5px); }
-        }
-        .animate-shake {
-          animation: shake 0.5s ease-in-out;
-        }
-      `}</style>
     </div>
   );
 }
