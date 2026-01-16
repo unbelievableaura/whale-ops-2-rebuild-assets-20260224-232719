@@ -10,7 +10,7 @@ const MENU_ITEMS = [
   { id: "roadmap", label: "ROADMAP", active: false, link: "/roadmap" },
   { id: "twitter", label: "X", active: false, link: "https://x.com/BlackOpsWhale" },
   { id: "dexscreener", label: "DEXSCREENER", active: false, link: "https://dexscreener.com" },
-  { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun", live: true },
+  { id: "pump", label: "PUMP.FUN", active: false, link: "https://pump.fun/coin/2WXbVHpK2RqA5FcU7fNzpeUTNrNoSXqT93ziEJnMpump", live: true },
 ];
 
 export default function Home() {
