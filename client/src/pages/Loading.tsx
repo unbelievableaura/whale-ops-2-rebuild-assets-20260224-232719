@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Loading() {
   const [, setLocation] = useLocation();
+  const { authenticate, isAuthenticated } = useAuth();
   const [flickerIntensity, setFlickerIntensity] = useState(1);
   const [isEntering, setIsEntering] = useState(false);
+
+  // If already authenticated, go directly to lobby
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLocation("/lobby");
+    }
+  }, [isAuthenticated, setLocation]);
 
   // Random flicker effect
   useEffect(() => {
@@ -20,8 +29,11 @@ export default function Loading() {
   // Listen for any key press or click to enter
   useEffect(() => {
     const handleEnter = () => {
-      if (!isEntering) {
+      if (!isEntering && !isAuthenticated) {
         setIsEntering(true);
+        // Authenticate the user
+        authenticate();
+        // Navigate to lobby after animation
         setTimeout(() => {
           setLocation("/lobby");
         }, 1500);
@@ -43,7 +55,7 @@ export default function Loading() {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("click", handleClick);
     };
-  }, [isEntering, setLocation]);
+  }, [isEntering, isAuthenticated, authenticate, setLocation]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none cursor-pointer">
