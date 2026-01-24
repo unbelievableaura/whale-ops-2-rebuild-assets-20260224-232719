@@ -67,7 +67,7 @@ export default function Loading() {
       >
         <img 
           src="/images/loading_bg.png" 
-          alt="WHALE OPS" 
+          alt="PENGUIN OPS" 
           className="w-full h-full object-cover object-center"
         />
         {/* Dark overlay gradient */}
@@ -123,8 +123,8 @@ export default function Loading() {
           className="mb-8 text-center w-[90%] mx-auto"
         >
           <img 
-            src="/images/whale-ops-logo-stacked.svg" 
-            alt="WHALE OPS" 
+            src="/images/penguin-ops-logo-stacked.png" 
+            alt="PENGUIN OPS" 
             className="w-full max-w-[400px] h-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.4)] filter brightness-110 mx-auto mix-blend-screen"
             style={{ filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.3))' }}
           />
@@ -186,7 +186,7 @@ export default function Loading() {
           transition={{ delay: 1.5 }}
           className="absolute bottom-6 left-0 right-0 flex justify-between items-center px-4 sm:px-8 text-[10px] sm:text-xs text-white/30 tracking-widest"
         >
-          <div>WHALE OPS™ v1.0</div>
+          <div>PENGUIN OPS™ v1.0</div>
           <div></div>
         </motion.div>
       </div>

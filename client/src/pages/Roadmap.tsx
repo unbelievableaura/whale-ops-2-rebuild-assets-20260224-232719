@@ -40,7 +40,7 @@ const ROADMAP_PHASES = [
     title: "DOMINATION",
     status: "UPCOMING",
     statusColor: "#666666",
-    image: "/images/whale_soldier.png",
+    image: "/images/penguin_soldier_pixel.png",
     accomplishments: [
       "CEX Listings",
       "Major Collaborations",

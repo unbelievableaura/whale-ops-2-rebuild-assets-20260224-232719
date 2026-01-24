@@ -322,7 +322,7 @@ export default function Emotes() {
           </div>
           
           <div className="text-xs font-mono text-white/30 tracking-widest">
-            2025 WHALE OPS
+            2025 PENGUIN OPS
           </div>
         </div>
       </div>

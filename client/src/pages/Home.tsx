@@ -139,15 +139,15 @@ export default function Home() {
               <div className="text-sm font-bold tracking-[0.2em] text-white/60 mb-[-5px]">LOBBY</div>
               {/* Stacked logo for mobile */}
               <img 
-                src="/images/whale-ops-logo-mobile.svg" 
-                alt="WHALE OPS" 
+                src="/images/penguin-ops-logo-mobile.png" 
+                alt="PENGUIN OPS" 
                 className="md:hidden w-full max-w-[280px] h-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] mix-blend-screen"
                 style={{paddingTop: '12px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))'}}
               />
               {/* Horizontal logo for desktop */}
               <img 
-                src="/images/whale-ops-logo.svg" 
-                alt="WHALE OPS" 
+                src="/images/penguin-ops-logo.png" 
+                alt="PENGUIN OPS" 
                 className="hidden md:block w-full max-w-[750px] h-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] mix-blend-screen"
                 style={{paddingTop: '12px', filter: 'drop-shadow(0 0 15px rgba(255,255,255,0.3))'}}
               />
@@ -161,7 +161,7 @@ export default function Home() {
             </div>
             <div className="text-left md:text-right flex flex-col gap-2">
               <div className="text-cod-green font-bold text-xl tracking-wide drop-shadow-[0_0_5px_rgba(0,255,0,0.5)] whitespace-nowrap">
-                [Whale] THE WHITE WHALE
+                [Penguin] THE EMPEROR PENGUIN
               </div>
               <div className="text-xs text-white/50 tracking-wider uppercase hidden md:block whitespace-nowrap">Add controller for Split Screen</div>
             </div>
@@ -407,7 +407,7 @@ export default function Home() {
               
               {/* Title */}
               <div className="mt-4 text-center">
-                <h3 className="text-xl font-black tracking-widest text-white">WHALE OPS TRAILER</h3>
+                <h3 className="text-xl font-black tracking-widest text-white">PENGUIN OPS TRAILER</h3>
                 <p className="text-xs font-bold tracking-[0.2em] text-cod-orange mt-1">OFFICIAL PREVIEW</p>
               </div>
             </motion.div>
