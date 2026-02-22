@@ -1,0 +1,1098 @@
+{
+  "generatedAt": "2026-02-21T16:45:03.141722",
+  "count": 156,
+  "items": [
+    {
+      "fileName": "batch5_b5_1_yda2rk9thhrmt0cwg8v9dncc7w_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/batch5_b5_1_yda2rk9thhrmt0cwg8v9dncc7w_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/batch5_b5_1_yda2rk9thhrmt0cwg8v9dncc7w_1920x1080.jpg",
+      "prompt": "BATCH5 prompt: strict style/context lock with minor variant priorities (identity, pose, tactical detail, minimal change).",
+      "batch": "batch5_b5"
+    },
+    {
+      "fileName": "batch5_b5_2_spm2c723nxrmy0cwg8vb4j38vr_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/batch5_b5_2_spm2c723nxrmy0cwg8vb4j38vr_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/batch5_b5_2_spm2c723nxrmy0cwg8vb4j38vr_1920x1080.jpg",
+      "prompt": "BATCH5 prompt: strict style/context lock with minor variant priorities (identity, pose, tactical detail, minimal change).",
+      "batch": "batch5_b5"
+    },
+    {
+      "fileName": "batch5_b5_3_2b9yktackxrmw0cwg8vbyhmca8_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/batch5_b5_3_2b9yktackxrmw0cwg8vbyhmca8_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/batch5_b5_3_2b9yktackxrmw0cwg8vbyhmca8_1920x1080.jpg",
+      "prompt": "BATCH5 prompt: strict style/context lock with minor variant priorities (identity, pose, tactical detail, minimal change).",
+      "batch": "batch5_b5"
+    },
+    {
+      "fileName": "batch5_b5_4_900yqwtp4srmw0cwg8vasscyg0_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/batch5_b5_4_900yqwtp4srmw0cwg8vasscyg0_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/batch5_b5_4_900yqwtp4srmw0cwg8vasscyg0_1920x1080.jpg",
+      "prompt": "BATCH5 prompt: strict style/context lock with minor variant priorities (identity, pose, tactical detail, minimal change).",
+      "batch": "batch5_b5"
+    },
+    {
+      "fileName": "batch5_b5_5_exe58maz1hrmt0cwg8vaqcj11w_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/batch5_b5_5_exe58maz1hrmt0cwg8vaqcj11w_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/batch5_b5_5_exe58maz1hrmt0cwg8vaqcj11w_1920x1080.jpg",
+      "prompt": "BATCH5 prompt: strict style/context lock with minor variant priorities (identity, pose, tactical detail, minimal change).",
+      "batch": "batch5_b5"
+    },
+    {
+      "fileName": "bestanchors10_10_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_10_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_10_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_1_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_2_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_3_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_4_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_5_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_5_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_5_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_6_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_6_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_6_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_7_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_7_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_7_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_8_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_8_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_8_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_9_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_9_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_9_3840x2160.jpg",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_1.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_10.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_10.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_10.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_2.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_3.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_4.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_5.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_6.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_7.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_7.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_7.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_8.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_8.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_8.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "bestanchors10_raw_9.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_9.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/bestanchors10_raw_9.png",
+      "prompt": "BEST-OF-ANCHORS prompt: Use selected favorites as style+identity bible; exact monkey + orange companion lock; COD cinematic combat realism; dynamic war action; no UI/text.",
+      "batch": "bestanchors10"
+    },
+    {
+      "fileName": "cod4k10_10_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_10_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_10_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_1_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_2_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_3_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_4_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_5_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_5_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_5_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_6_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_6_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_6_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_7_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_7_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_7_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_8_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_8_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_8_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_9_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_9_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_9_3840x2160.jpg",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_1.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_10.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_10.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_10.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_2.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_3.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_4.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_5.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_6.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_7.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_7.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_7.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_8.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_8.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_8.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "cod4k10_raw_9.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_9.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/cod4k10_raw_9.png",
+      "prompt": "COD 4K BATCH prompt: 10 creative/random COD-style war scenes; exact monkey + orange companion; 4K 16:9.",
+      "batch": "cod4k10"
+    },
+    {
+      "fileName": "codemote3_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codemote3_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codemote3_1_3840x2160.jpg",
+      "prompt": "EMOTIONAL prompt: cinematic moment holding orange companion while crying; exact identity lock; AAA realism.",
+      "batch": "codemote3"
+    },
+    {
+      "fileName": "codemote3_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codemote3_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codemote3_2_3840x2160.jpg",
+      "prompt": "EMOTIONAL prompt: cinematic moment holding orange companion while crying; exact identity lock; AAA realism.",
+      "batch": "codemote3"
+    },
+    {
+      "fileName": "codemote3_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codemote3_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codemote3_3_3840x2160.jpg",
+      "prompt": "EMOTIONAL prompt: cinematic moment holding orange companion while crying; exact identity lock; AAA realism.",
+      "batch": "codemote3"
+    },
+    {
+      "fileName": "codemote3_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codemote3_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codemote3_raw_1.png",
+      "prompt": "EMOTIONAL prompt: cinematic moment holding orange companion while crying; exact identity lock; AAA realism.",
+      "batch": "codemote3"
+    },
+    {
+      "fileName": "codemote3_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codemote3_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codemote3_raw_2.png",
+      "prompt": "EMOTIONAL prompt: cinematic moment holding orange companion while crying; exact identity lock; AAA realism.",
+      "batch": "codemote3"
+    },
+    {
+      "fileName": "codemote3_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codemote3_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codemote3_raw_3.png",
+      "prompt": "EMOTIONAL prompt: cinematic moment holding orange companion while crying; exact identity lock; AAA realism.",
+      "batch": "codemote3"
+    },
+    {
+      "fileName": "codphoto4_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_1_3840x2160.jpg",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_2_3840x2160.jpg",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_3_3840x2160.jpg",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_4_3840x2160.jpg",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_1.png",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_2.png",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_3.png",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codphoto4_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codphoto4_raw_4.png",
+      "prompt": "COD PHOTOREAL prompt: ultra-photorealistic AAA COD war scenes; exact monkey + orange companion; realistic lens/light/material rendering.",
+      "batch": "codphoto4"
+    },
+    {
+      "fileName": "codscream6_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_1_3840x2160.jpg",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_2_3840x2160.jpg",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_3_3840x2160.jpg",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_4_3840x2160.jpg",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_5_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_5_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_5_3840x2160.jpg",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_6_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_6_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_6_3840x2160.jpg",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_1.png",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_2.png",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_3.png",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_4.png",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_5.png",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codscream6_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codscream6_raw_6.png",
+      "prompt": "COD SCREAM prompt: extremely cinematic scenes of monkey screaming while shooting; close-ups + action shots; exact identity + orange companion.",
+      "batch": "codscream6"
+    },
+    {
+      "fileName": "codwar6_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_1_3840x2160.jpg",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_2_3840x2160.jpg",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_3_3840x2160.jpg",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_4_3840x2160.jpg",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_5_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_5_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_5_3840x2160.jpg",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_6_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_6_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_6_3840x2160.jpg",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_1.png",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_2.png",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_3.png",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_4.png",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_5.png",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "codwar6_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/codwar6_raw_6.png",
+      "prompt": "COD WAR prompt: active in-war action (moving/firing/taking cover/reloading/breaching), exact monkey + orange companion, 4K cinematic realism.",
+      "batch": "codwar6"
+    },
+    {
+      "fileName": "gemini_batch10_10_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_10_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_10_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_1_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_1_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_1_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_2_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_2_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_2_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_3_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_3_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_3_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_4_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_4_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_4_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_5_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_5_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_5_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_6_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_6_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_6_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_7_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_7_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_7_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_8_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_8_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_8_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_9_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_9_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_9_1920x1080.jpg",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_1.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_10.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_10.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_10.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_2.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_3.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_4.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_5.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_6.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_7.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_7.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_7.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_8.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_8.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_8.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_batch10_raw_9.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_9.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_batch10_raw_9.png",
+      "prompt": "GEMINI BATCH prompt: loading-screen style variations with slight action/background changes; exact monkey + orange companion lock.",
+      "batch": "gemini_batch10"
+    },
+    {
+      "fileName": "gemini_master_lobby_1_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_master_lobby_1_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_master_lobby_1_1920x1080.jpg",
+      "prompt": "MASTER LOBBY prompt: COD-style lobby key art, exact monkey + orange companion, 16:9 lock, no UI/text.",
+      "batch": "gemini_master_lobby"
+    },
+    {
+      "fileName": "gemini_master_lobby_2_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/gemini_master_lobby_2_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/gemini_master_lobby_2_1920x1080.jpg",
+      "prompt": "MASTER LOBBY prompt: COD-style lobby key art, exact monkey + orange companion, 16:9 lock, no UI/text.",
+      "batch": "gemini_master_lobby"
+    },
+    {
+      "fileName": "junglecombat8_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_1_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_2_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_3_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_4_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_5_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_5_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_5_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_6_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_6_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_6_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_7_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_7_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_7_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_8_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_8_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_8_3840x2160.jpg",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_1.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_2.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_3.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_4.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_5.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_6.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_7.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_7.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_7.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "junglecombat8_raw_8.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_8.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/junglecombat8_raw_8.png",
+      "prompt": "JUNGLE COMBAT prompt: style-bible locked; exact monkey + orange companion; active jungle combat actions only; 4K cinematic COD realism.",
+      "batch": "junglecombat8"
+    },
+    {
+      "fileName": "nbretry4_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_1_3840x2160.jpg",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_2_3840x2160.jpg",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_3_3840x2160.jpg",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_4_3840x2160.jpg",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_1.png",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_2.png",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_3.png",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "nbretry4_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/nbretry4_raw_4.png",
+      "prompt": "NANO RETRY prompt: strict composition/pose lock from base portrait; upscale to 4K and add orange companion on shoulder/back.",
+      "batch": "nbretry4"
+    },
+    {
+      "fileName": "quick_quick_1_qsdnkabzbhrmy0cwg8qrmf8a9m_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/quick_quick_1_qsdnkabzbhrmy0cwg8qrmf8a9m_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/quick_quick_1_qsdnkabzbhrmy0cwg8qrmf8a9m_1920x1080.jpg",
+      "prompt": "QUICK prompt: strict style lock with 1920x1080 normalization and small prompt priority shifts.",
+      "batch": "quick_quick"
+    },
+    {
+      "fileName": "quick_quick_2_k1h213w8cdrmy0cwg8qvq85144_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/quick_quick_2_k1h213w8cdrmy0cwg8qvq85144_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/quick_quick_2_k1h213w8cdrmy0cwg8qvq85144_1920x1080.jpg",
+      "prompt": "QUICK prompt: strict style lock with 1920x1080 normalization and small prompt priority shifts.",
+      "batch": "quick_quick"
+    },
+    {
+      "fileName": "quick_quick_3_hk7gqrwhcsrmw0cwg8qt6v59g0_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/quick_quick_3_hk7gqrwhcsrmw0cwg8qt6v59g0_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/quick_quick_3_hk7gqrwhcsrmw0cwg8qt6v59g0_1920x1080.jpg",
+      "prompt": "QUICK prompt: strict style lock with 1920x1080 normalization and small prompt priority shifts.",
+      "batch": "quick_quick"
+    },
+    {
+      "fileName": "rebatch_rebatch_nb1_tdc9f9dmthrmt0cwg9ms0ms4gw_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_nb1_tdc9f9dmthrmt0cwg9ms0ms4gw_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_nb1_tdc9f9dmthrmt0cwg9ms0ms4gw_1920x1080.jpg",
+      "prompt": "RE-BATCH prompt: strict pose/composition lock, exact monkey + orange companion, dark COD cinematic mood.",
+      "batch": "rebatch_rebatch"
+    },
+    {
+      "fileName": "rebatch_rebatch_nb2_efgwkz7qbsrmy0cwg9mspzmpmw_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_nb2_efgwkz7qbsrmy0cwg9mspzmpmw_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_nb2_efgwkz7qbsrmy0cwg9mspzmpmw_1920x1080.jpg",
+      "prompt": "RE-BATCH prompt: strict pose/composition lock, exact monkey + orange companion, dark COD cinematic mood.",
+      "batch": "rebatch_rebatch"
+    },
+    {
+      "fileName": "rebatch_rebatch_sd1_f7wndhhsx1rmt0cwg9nae9nz5m_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_sd1_f7wndhhsx1rmt0cwg9nae9nz5m_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_sd1_f7wndhhsx1rmt0cwg9nae9nz5m_1920x1080.jpg",
+      "prompt": "RE-BATCH prompt: strict pose/composition lock, exact monkey + orange companion, dark COD cinematic mood.",
+      "batch": "rebatch_rebatch"
+    },
+    {
+      "fileName": "rebatch_rebatch_sd2_xvmbkhkx5xrmr0cwg9nabfj23w_1920x1080.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_sd2_xvmbkhkx5xrmr0cwg9nabfj23w_1920x1080.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/rebatch_rebatch_sd2_xvmbkhkx5xrmr0cwg9nabfj23w_1920x1080.jpg",
+      "prompt": "RE-BATCH prompt: strict pose/composition lock, exact monkey + orange companion, dark COD cinematic mood.",
+      "batch": "rebatch_rebatch"
+    },
+    {
+      "fileName": "stylebible10_10_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_10_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_10_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_1_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_1_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_1_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_2_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_2_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_2_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_3_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_3_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_3_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_4_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_4_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_4_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_5_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_5_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_5_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_6_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_6_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_6_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_7_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_7_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_7_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_8_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_8_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_8_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_9_3840x2160.jpg",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_9_3840x2160.jpg",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_9_3840x2160.jpg",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_1.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_1.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_1.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_10.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_10.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_10.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_2.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_2.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_2.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_3.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_3.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_3.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_4.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_4.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_4.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_5.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_5.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_5.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_6.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_6.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_6.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_7.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_7.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_7.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_8.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_8.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_8.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    },
+    {
+      "fileName": "stylebible10_raw_9.png",
+      "filePath": "/Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_9.png",
+      "fileUrl": "file:///Users/dustin/.openclaw/media/inbound/generated/stylebible10_raw_9.png",
+      "prompt": "STYLE-BIBLE prompt: use provided reference set as style+identity bible; exact monkey + orange companion; cinematic COD combat scenes in varied environments.",
+      "batch": "stylebible10"
+    }
+  ]
+}
