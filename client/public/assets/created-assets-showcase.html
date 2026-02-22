@@ -12,10 +12,10 @@ fetch('/assets/created-assets-manifest.json').then(r=>r.json()).then(data=>{
   const grid=document.getElementById('grid');
   data.items.forEach(it=>{
     const card=document.createElement('div');card.className='card';
-    card.innerHTML=`<img class="img" src="${it.fileUrl}" alt="${it.fileName}" onerror="this.style.display='none'"/>
+    card.innerHTML=`<img class="img" src="${it.publicUrl}" alt="${it.fileName}" onerror="this.style.display='none'"/>
       <div class="meta"><b>${it.fileName}</b><br/>Batch: ${it.batch}</div>
       <div class="prompt">${it.prompt}</div>
-      <div class="meta"><a href="${it.fileUrl}">Open File</a></div>`;
+      <div class="meta"><a href="${it.publicUrl}" target="_blank">Open Image</a></div>`;
     grid.appendChild(card);
   });
 });
