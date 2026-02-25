@@ -22,10 +22,10 @@ export default function Home() {
   // CA bar is shown by default, user can dismiss it
 
   const ROTATING_BACKGROUNDS = [
-    { src: "/assets/generated/stylebible10_raw_8.png", flipY: true },
-    { src: "/assets/generated/stylebible10_raw_5.png", flipY: true },
-    { src: "/assets/generated/gemini_batch10_raw_8.png", flipY: false },
-    { src: "/assets/generated/bestanchors10_raw_8.png", flipY: false },
+    { src: "/assets/generated/stylebible10_raw_8.png", flipX: true },
+    { src: "/assets/generated/stylebible10_raw_5.png", flipX: true },
+    { src: "/assets/generated/gemini_batch10_raw_8.png", flipX: false },
+    { src: "/assets/generated/bestanchors10_raw_8.png", flipX: false },
   ];
 
   useEffect(() => {
@@ -110,7 +110,7 @@ export default function Home() {
             className="w-full h-full object-cover absolute inset-0"
             style={{
               objectPosition: '35% center',
-              transform: ROTATING_BACKGROUNDS[bgIndex].flipY ? 'scaleY(-1)' : 'none'
+              transform: ROTATING_BACKGROUNDS[bgIndex].flipX ? 'scaleX(-1)' : 'none'
             }}
           />
         </AnimatePresence>
