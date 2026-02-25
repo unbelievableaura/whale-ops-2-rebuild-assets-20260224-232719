@@ -132,6 +132,19 @@ export default function Home() {
         </div>
       </div>
 
+
+      {/* monkey preview tile */}
+      <div className="absolute bottom-16 right-8 z-20 w-[320px] bg-black/38 border border-white/20 backdrop-blur-sm overflow-hidden">
+        <img
+          src="/assets/generated/bestanchors10_raw_8.png"
+          alt="Monkey preview"
+          className="w-full h-32 object-cover"
+        />
+        <div className="px-3 py-2 border-t border-white/15">
+          <div className="text-white text-sm tracking-wider">MONKEY OPS PREVIEW</div>
+        </div>
+      </div>
+
       {/* lower-left net status */}
       <div className="absolute bottom-6 left-8 z-20 text-white/70 tracking-widest text-sm">NAT TYPE: OPEN</div>
 
