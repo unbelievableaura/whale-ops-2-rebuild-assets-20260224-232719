@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const MENU_ITEMS = [
-  { id: "find", label: "FIND MATCH", locked: true },
-  { id: "class", label: "CREATE A CLASS", link: "/emotes" },
-  { id: "operator", label: "OPERATOR", link: "/roadmap" },
-  { id: "armory", label: "ARMORY", link: "/assets" },
-  { id: "private", label: "PRIVATE MATCH", locked: true },
-  { id: "store", label: "STORE", locked: true },
+const TOP_NAV = ["PLAY", "WEAPONS", "BATTLE PASS", "OPERATORS", "CHALLENGES", "BARRACKS", "STORE"];
+
+const PLAYLISTS = [
+  { id: "battle-royale", label: "BATTLE ROYALE", active: true, link: "/emotes" },
+  { id: "armored", label: "ARMORED ROYALE QUADS", link: "/roadmap" },
+  { id: "plunder", label: "PLUNDER TRIOS", link: "/assets" },
+  { id: "practice", label: "PRACTICE MODES & TRIALS", locked: true },
 ];
 
 const ROTATING_BACKGROUNDS = [
@@ -18,40 +18,34 @@ const ROTATING_BACKGROUNDS = [
 ];
 
 export default function Home() {
-  const [activeMenu, setActiveMenu] = useState(MENU_ITEMS[1].id);
+  const [activePlaylist, setActivePlaylist] = useState(PLAYLISTS[0].id);
+  const [activeTop, setActiveTop] = useState(TOP_NAV[0]);
   const [bgIndex, setBgIndex] = useState(0);
-  const [showHudNoise, setShowHudNoise] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setBgIndex((prev) => (prev + 1) % ROTATING_BACKGROUNDS.length);
-    }, 5000);
+    const interval = setInterval(() => setBgIndex((prev) => (prev + 1) % ROTATING_BACKGROUNDS.length), 5000);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      const idx = MENU_ITEMS.findIndex((m) => m.id === activeMenu);
+      const idx = PLAYLISTS.findIndex((m) => m.id === activePlaylist);
       if (e.key === "ArrowDown") {
-        setActiveMenu(MENU_ITEMS[(idx + 1) % MENU_ITEMS.length].id);
+        setActivePlaylist(PLAYLISTS[(idx + 1) % PLAYLISTS.length].id);
       } else if (e.key === "ArrowUp") {
-        setActiveMenu(MENU_ITEMS[(idx - 1 + MENU_ITEMS.length) % MENU_ITEMS.length].id);
+        setActivePlaylist(PLAYLISTS[(idx - 1 + PLAYLISTS.length) % PLAYLISTS.length].id);
       } else if (e.key === "Enter") {
-        const current = MENU_ITEMS.find((m) => m.id === activeMenu);
+        const current = PLAYLISTS.find((m) => m.id === activePlaylist);
         if (current?.link) window.location.href = current.link;
-      } else if (e.key.toLowerCase() === "g") {
-        setShowHudNoise(true);
-        setTimeout(() => setShowHudNoise(false), 220);
       }
     };
-
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
-  }, [activeMenu]);
+  }, [activePlaylist]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
-      {/* Cinematic rotating background */}
+      {/* background */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.img
@@ -59,104 +53,139 @@ export default function Home() {
             src={ROTATING_BACKGROUNDS[bgIndex].src}
             alt="Lobby background"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.55 }}
+            animate={{ opacity: 0.6 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeInOut" }}
             className="w-full h-full object-cover absolute inset-0"
-            style={{
-              objectPosition: "center center",
-              transform: ROTATING_BACKGROUNDS[bgIndex].flipX ? "scaleX(-1)" : "none",
-            }}
+            style={{ transform: ROTATING_BACKGROUNDS[bgIndex].flipX ? "scaleX(-1)" : "none" }}
           />
         </AnimatePresence>
-
-        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/35 to-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-transparent to-black/45" />
         <div className="absolute inset-0 bg-[url('/images/grid_pattern.png')] opacity-10 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay" />
       </div>
 
-      {/* top-left title */}
-      <div className="absolute top-8 left-8 z-20 tracking-widest text-white/90 text-3xl font-semibold">
-        XBOX LIVE
+      {/* top nav strip */}
+      <div className="absolute top-0 left-0 right-0 z-20 h-20 bg-black/55 border-b border-white/15 backdrop-blur-sm px-6 flex items-center justify-between">
+        <div className="flex items-center gap-6">
+          <div className="text-3xl font-black tracking-tight leading-none">
+            <div>CALL OF DUTY</div>
+            <div className="text-4xl -mt-2">PUNCH OPS</div>
+          </div>
+          <div className="hidden md:flex items-center gap-6 ml-6 text-sm tracking-widest">
+            {TOP_NAV.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onMouseEnter={() => setActiveTop(item)}
+                className={`pb-1 border-b-2 transition-colors ${
+                  activeTop === item ? "text-[#f6ca64] border-[#f6ca64]" : "text-white/65 border-transparent hover:text-white"
+                }`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="text-right">
+          <div className="text-3xl font-bold">Rank 55</div>
+          <div className="text-white/70 text-sm">Social · 1 / 20</div>
+        </div>
       </div>
 
-      {/* left menu panel */}
-      <div className="absolute top-24 left-8 z-20 w-[300px] bg-black/35 border border-white/15 backdrop-blur-sm">
-        {MENU_ITEMS.map((item) => {
-          const active = activeMenu === item.id;
-
-          const row = (
+      {/* left playlist panel */}
+      <div className="absolute top-24 left-6 z-20 w-[320px] space-y-2">
+        {PLAYLISTS.map((item) => {
+          const active = activePlaylist === item.id;
+          const block = (
             <div
-              className={`relative h-11 flex items-center px-5 text-[28px] md:text-[22px] font-medium tracking-wide transition-all ${
+              className={`h-20 px-4 flex items-center justify-between border transition-all ${
                 active
-                  ? "text-white bg-[#f9c8581f] border-l-4 border-[#f6ca64]"
-                  : "text-white/80 hover:text-white hover:bg-white/5"
-              } ${item.locked ? "opacity-70" : ""}`}
+                  ? "bg-[#d7b24f26] border-[#f6ca64] shadow-[inset_0_0_0_1px_rgba(246,202,100,0.45)]"
+                  : "bg-black/35 border-white/20 hover:bg-white/10"
+              }`}
             >
-              {item.label}
-              {item.locked && <span className="ml-2 text-xs text-white/40">LOCKED</span>}
+              <div>
+                <div className={`text-3xl md:text-[28px] font-semibold tracking-wide ${active ? "text-[#f6ca64]" : "text-white/85"}`}>
+                  {item.label}
+                </div>
+                {item.locked && <div className="text-white/45 text-sm">LOCKED</div>}
+              </div>
+              {active && <div className="text-white/80">●</div>}
             </div>
           );
-
           return item.link && !item.locked ? (
-            <a
-              key={item.id}
-              href={item.link}
-              onMouseEnter={() => setActiveMenu(item.id)}
-              className="block border-b border-white/10 last:border-b-0"
-            >
-              {row}
+            <a key={item.id} href={item.link} onMouseEnter={() => setActivePlaylist(item.id)} className="block">
+              {block}
             </a>
           ) : (
-            <button
-              key={item.id}
-              onMouseEnter={() => setActiveMenu(item.id)}
-              className="block w-full text-left border-b border-white/10 last:border-b-0"
-              type="button"
-            >
-              {row}
+            <button key={item.id} type="button" onMouseEnter={() => setActivePlaylist(item.id)} className="block w-full text-left">
+              {block}
             </button>
           );
         })}
-      </div>
-
-
-
-      {/* right player card */}
-      <div className="absolute top-28 right-8 z-20 w-[300px] bg-black/40 border border-white/20 backdrop-blur-sm">
-        <div className="px-4 pt-3 pb-2 text-[30px] md:text-[24px] tracking-wide text-white/95">1/18 PLAYERS</div>
-        <div className="px-4 pb-3 border-t border-white/15">
-          <div className="mt-2 text-[#f6ca64] text-sm font-bold tracking-wide">LVL 50 [PUNCH]</div>
-          <div className="text-white text-lg tracking-wide">Punch The Monkey</div>
-          <div className="text-white/45 text-sm mt-1">Add Controller for Split Screen</div>
+        <div className="h-10 px-4 flex items-center justify-between bg-black/35 border border-white/20 text-white/70">
+          <span>Squad Fill</span>
+          <span>Fill</span>
         </div>
       </div>
 
-      {/* lower-left net status */}
-      <div className="absolute bottom-6 left-8 z-20 text-white/70 tracking-widest text-sm">NAT TYPE: OPEN</div>
-
-      {/* bottom command rail */}
-      <div className="absolute bottom-4 right-8 z-20 flex items-center gap-5 text-white/75 tracking-wider text-sm">
-        <span>ROTATE</span>
-        <span>RS</span>
-        <span>OPTIONS</span>
-        <span>HELP</span>
-        <span>X</span>
-        <span>FRIENDS</span>
-        <span>Y</span>
-        <span>BACK</span>
-        <span>B</span>
+      {/* center marker */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+        <div className="text-center mt-20">
+          <div className="text-[#9bc1ff] text-xl font-bold">55</div>
+          <div className="text-white/90 text-2xl tracking-wide">PunchTheMonkey</div>
+        </div>
       </div>
 
-      {/* subtle full-screen scanline */}
-      <div className="absolute inset-0 z-30 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.22)_50%),linear-gradient(90deg,rgba(100,220,255,0.06),rgba(255,255,255,0.02),rgba(255,180,0,0.04))] bg-[length:100%_2px,3px_100%] bg-repeat" />
-
-      {/* hud glitch pulse */}
-      {showHudNoise && (
-        <div className="absolute inset-0 z-40 pointer-events-none mix-blend-screen opacity-45">
-          <div className="w-full h-full bg-[url('/images/glitch_overlay.png')] bg-cover animate-pulse" />
+      {/* right mission panel */}
+      <div className="absolute top-24 right-6 z-20 w-[360px] bg-black/40 border border-white/20 backdrop-blur-sm">
+        <div className="px-4 py-3 border-b border-white/15">
+          <div className="text-white/70 text-sm">Mission</div>
+          <div className="text-[#9bc1ff] text-2xl">Demonstrator Royale</div>
+          <div className="text-white/65 text-sm mt-1">(2/7) Get a Point Blank Double Kill using a Shotgun 3 times</div>
         </div>
-      )}
+        <div className="px-4 py-3">
+          <div className="flex justify-between items-center mb-2">
+            <div className="text-white/90 text-2xl">Daily Challenges</div>
+            <div className="text-white/60">1h 49m</div>
+          </div>
+          {[
+            "Kill 3 downed enemies",
+            "Complete 5 Recon Contract(s)",
+            "Start 1 Contract(s) in Downtown Tavorsk",
+          ].map((c, i) => (
+            <div key={c} className="flex items-center justify-between py-2 border-t border-white/10 text-sm">
+              <div className="text-white/75">{c}</div>
+              <div className={`text-xs ${i === 0 ? "text-[#f6ca64]" : "text-white/40"}`}>{i === 0 ? "3/3" : "0/5"}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* map tile bottom-right */}
+      <div className="absolute bottom-16 right-6 z-20 w-[360px] bg-black/45 border border-white/20">
+        <img src="/images/valhalla_map.jpg" alt="Map overview" className="w-full h-36 object-cover opacity-85" />
+        <div className="p-3 border-t border-white/15">
+          <div className="text-3xl font-semibold">Verdansk Map Overview</div>
+          <div className="text-white/70 text-sm">A closer look at the massive area.</div>
+        </div>
+      </div>
+
+      {/* bottom bar */}
+      <div className="absolute left-0 right-0 bottom-0 z-20 h-10 bg-black/55 border-t border-white/15 px-6 flex items-center justify-between text-sm text-white/70 tracking-wide">
+        <div className="flex items-center gap-5">
+          <span>◯ Back</span>
+          <span>✕ Select</span>
+          <span>☰ Options</span>
+        </div>
+        <div className="text-right">
+          <span>Party Privacy: Public</span>
+          <span className="ml-4">NAT Type: Open</span>
+        </div>
+      </div>
+
+      <div className="absolute inset-0 z-30 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.2)_50%)] bg-[length:100%_2px]" />
     </div>
   );
 }
