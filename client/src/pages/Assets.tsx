@@ -49,7 +49,7 @@ export default function Assets() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6 md:p-10 font-rajdhani">
       <div className="max-w-7xl mx-auto space-y-8">
         <header className="space-y-2 border-b border-zinc-800 pb-6">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-wide">WHALE OPS · Asset Preview</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-wide">PUNCH OPS · Asset Preview</h1>
           <p className="text-zinc-400">Standalone asset catalog page (direct URL only). Not linked from in-app navigation.</p>
           <p className="text-sm text-zinc-500">
             {manifest ? `${manifest.count} assets · Generated ${new Date(manifest.generatedAt).toLocaleString()}` : "Loading asset manifest..."}
