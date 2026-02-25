@@ -16,9 +16,24 @@ export default function Home() {
   const [showGlitch, setShowGlitch] = useState(false);
   const [uiVisible, setUiVisible] = useState(true);
   const [showTrailerModal, setShowTrailerModal] = useState(false);
+  const [bgIndex, setBgIndex] = useState(0);
   const trailerModalRef = useRef<HTMLVideoElement>(null);
 
   // CA bar is shown by default, user can dismiss it
+
+  const ROTATING_BACKGROUNDS = [
+    { src: "/assets/generated/stylebible10_raw_8.png", flipY: true },
+    { src: "/assets/generated/stylebible10_raw_5.png", flipY: true },
+    { src: "/assets/generated/gemini_batch10_raw_8.png", flipY: false },
+    { src: "/assets/generated/bestanchors10_raw_8.png", flipY: false },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % ROTATING_BACKGROUNDS.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     // Simulate loading progress
@@ -83,15 +98,22 @@ export default function Home() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <motion.img
-          src="/images/whale_soldier_intro.png"
-          alt="Lobby background"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="w-full h-full object-cover absolute inset-0"
-          style={{ objectPosition: '35% center' }}
-        />
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={bgIndex}
+            src={ROTATING_BACKGROUNDS[bgIndex].src}
+            alt="Lobby background"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="w-full h-full object-cover absolute inset-0"
+            style={{
+              objectPosition: '35% center',
+              transform: ROTATING_BACKGROUNDS[bgIndex].flipY ? 'scaleY(-1)' : 'none'
+            }}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
         <div className="absolute inset-0 bg-[url('/images/grid_pattern.png')] opacity-10 mix-blend-overlay" />
 
