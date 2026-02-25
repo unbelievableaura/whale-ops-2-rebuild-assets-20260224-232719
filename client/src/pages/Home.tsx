@@ -123,7 +123,7 @@ export default function Home() {
 
 
       {/* right player card */}
-      <div className="absolute top-28 right-8 z-20 w-[300px] bg-black/40 border border-white/20 backdrop-blur-sm">
+      <div className="absolute top-28 right-8 z-20 w-[min(520px,calc(100vw-2rem))] bg-black/40 border border-white/20 backdrop-blur-sm">
         <div className="px-4 pt-3 pb-2 text-[30px] md:text-[24px] tracking-wide text-white/95">1/18 PLAYERS</div>
         <div className="px-4 pb-3 border-t border-white/15">
           <div className="mt-2 text-[#f6ca64] text-sm font-bold tracking-wide">LVL 50 [PUNCH]</div>
