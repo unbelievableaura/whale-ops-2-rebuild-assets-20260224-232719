@@ -59,7 +59,7 @@ export default function Home() {
             src={ROTATING_BACKGROUNDS[bgIndex].src}
             alt="Lobby background"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.55 }}
+            animate={{ opacity: 0.72 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.9, ease: "easeInOut" }}
             className="w-full h-full object-cover absolute inset-0"
@@ -70,9 +70,9 @@ export default function Home() {
           />
         </AnimatePresence>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-black/45" />
-        <div className="absolute inset-0 bg-[url('/images/grid_pattern.png')] opacity-10 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-black/25" />
+        <div className="absolute inset-0 bg-[url('/images/grid_pattern.png')] opacity-5 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-4 mix-blend-overlay" />
       </div>
 
       {/* top-left title */}
@@ -162,7 +162,7 @@ export default function Home() {
       </div>
 
       {/* subtle full-screen scanline */}
-      <div className="absolute inset-0 z-30 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.22)_50%),linear-gradient(90deg,rgba(100,220,255,0.06),rgba(255,255,255,0.02),rgba(255,180,0,0.04))] bg-[length:100%_2px,3px_100%] bg-repeat" />
+      <div className="absolute inset-0 z-30 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.14)_50%),linear-gradient(90deg,rgba(100,220,255,0.03),rgba(255,255,255,0.01),rgba(255,180,0,0.02))] bg-[length:100%_2px,3px_100%] bg-repeat" />
 
       {/* hud glitch pulse */}
       {showHudNoise && (
