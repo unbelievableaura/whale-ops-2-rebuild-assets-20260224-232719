@@ -11,7 +11,7 @@ import Loading from "./pages/Loading";
 import Home from "./pages/Home";
 import Emotes from "./pages/Emotes";
 import Roadmap from "./pages/Roadmap";
-
+import Assets from "./pages/Assets";
 
 function Router() {
   return (
@@ -32,6 +32,7 @@ function Router() {
           <Roadmap />
         </ProtectedRoute>
       </Route>
+      <Route path={"/assets"} component={Assets} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

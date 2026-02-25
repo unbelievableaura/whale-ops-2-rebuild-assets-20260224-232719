@@ -1,0 +1,1170 @@
+{
+  "generatedAt": "2026-02-25T07:27:12.024Z",
+  "count": 194,
+  "assets": [
+    {
+      "path": "/apple-touch-icon.png",
+      "ext": ".png",
+      "size": 6749,
+      "name": "apple-touch-icon.png"
+    },
+    {
+      "path": "/assets/generated/batch5_b5_1_yda2rk9thhrmt0cwg8v9dncc7w_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 345068,
+      "name": "batch5_b5_1_yda2rk9thhrmt0cwg8v9dncc7w_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/batch5_b5_2_spm2c723nxrmy0cwg8vb4j38vr_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 355287,
+      "name": "batch5_b5_2_spm2c723nxrmy0cwg8vb4j38vr_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/batch5_b5_3_2b9yktackxrmw0cwg8vbyhmca8_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 351115,
+      "name": "batch5_b5_3_2b9yktackxrmw0cwg8vbyhmca8_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/batch5_b5_4_900yqwtp4srmw0cwg8vasscyg0_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 346661,
+      "name": "batch5_b5_4_900yqwtp4srmw0cwg8vasscyg0_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/batch5_b5_5_exe58maz1hrmt0cwg8vaqcj11w_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 348116,
+      "name": "batch5_b5_5_exe58maz1hrmt0cwg8vaqcj11w_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1510063,
+      "name": "bestanchors10_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_10_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1797804,
+      "name": "bestanchors10_10_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1560312,
+      "name": "bestanchors10_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1551471,
+      "name": "bestanchors10_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1829257,
+      "name": "bestanchors10_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_5_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1676218,
+      "name": "bestanchors10_5_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_6_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1789160,
+      "name": "bestanchors10_6_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_7_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1547317,
+      "name": "bestanchors10_7_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_8_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1590176,
+      "name": "bestanchors10_8_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_9_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1618913,
+      "name": "bestanchors10_9_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_1.png",
+      "ext": ".png",
+      "size": 737728,
+      "name": "bestanchors10_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_10.png",
+      "ext": ".png",
+      "size": 847129,
+      "name": "bestanchors10_raw_10.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_2.png",
+      "ext": ".png",
+      "size": 761127,
+      "name": "bestanchors10_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_3.png",
+      "ext": ".png",
+      "size": 754192,
+      "name": "bestanchors10_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_4.png",
+      "ext": ".png",
+      "size": 869484,
+      "name": "bestanchors10_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_5.png",
+      "ext": ".png",
+      "size": 809393,
+      "name": "bestanchors10_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_6.png",
+      "ext": ".png",
+      "size": 849798,
+      "name": "bestanchors10_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_7.png",
+      "ext": ".png",
+      "size": 759395,
+      "name": "bestanchors10_raw_7.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_8.png",
+      "ext": ".png",
+      "size": 765896,
+      "name": "bestanchors10_raw_8.png"
+    },
+    {
+      "path": "/assets/generated/bestanchors10_raw_9.png",
+      "ext": ".png",
+      "size": 793537,
+      "name": "bestanchors10_raw_9.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1723075,
+      "name": "cod4k10_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_10_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1846393,
+      "name": "cod4k10_10_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1752559,
+      "name": "cod4k10_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1608823,
+      "name": "cod4k10_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1816691,
+      "name": "cod4k10_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_5_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1488352,
+      "name": "cod4k10_5_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_6_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1778256,
+      "name": "cod4k10_6_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_7_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1835666,
+      "name": "cod4k10_7_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_8_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1936251,
+      "name": "cod4k10_8_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_9_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1826045,
+      "name": "cod4k10_9_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_1.png",
+      "ext": ".png",
+      "size": 822159,
+      "name": "cod4k10_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_10.png",
+      "ext": ".png",
+      "size": 877622,
+      "name": "cod4k10_raw_10.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_2.png",
+      "ext": ".png",
+      "size": 832370,
+      "name": "cod4k10_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_3.png",
+      "ext": ".png",
+      "size": 768886,
+      "name": "cod4k10_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_4.png",
+      "ext": ".png",
+      "size": 849933,
+      "name": "cod4k10_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_5.png",
+      "ext": ".png",
+      "size": 719063,
+      "name": "cod4k10_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_6.png",
+      "ext": ".png",
+      "size": 845794,
+      "name": "cod4k10_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_7.png",
+      "ext": ".png",
+      "size": 872981,
+      "name": "cod4k10_raw_7.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_8.png",
+      "ext": ".png",
+      "size": 902044,
+      "name": "cod4k10_raw_8.png"
+    },
+    {
+      "path": "/assets/generated/cod4k10_raw_9.png",
+      "ext": ".png",
+      "size": 878624,
+      "name": "cod4k10_raw_9.png"
+    },
+    {
+      "path": "/assets/generated/codemote3_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1535578,
+      "name": "codemote3_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codemote3_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1585955,
+      "name": "codemote3_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codemote3_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1541403,
+      "name": "codemote3_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codemote3_raw_1.png",
+      "ext": ".png",
+      "size": 729494,
+      "name": "codemote3_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/codemote3_raw_2.png",
+      "ext": ".png",
+      "size": 744054,
+      "name": "codemote3_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/codemote3_raw_3.png",
+      "ext": ".png",
+      "size": 742810,
+      "name": "codemote3_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/codphoto4_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1661007,
+      "name": "codphoto4_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codphoto4_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1682996,
+      "name": "codphoto4_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codphoto4_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1665055,
+      "name": "codphoto4_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codphoto4_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1754382,
+      "name": "codphoto4_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codphoto4_raw_1.png",
+      "ext": ".png",
+      "size": 785143,
+      "name": "codphoto4_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/codphoto4_raw_2.png",
+      "ext": ".png",
+      "size": 795688,
+      "name": "codphoto4_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/codphoto4_raw_3.png",
+      "ext": ".png",
+      "size": 803785,
+      "name": "codphoto4_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/codphoto4_raw_4.png",
+      "ext": ".png",
+      "size": 827619,
+      "name": "codphoto4_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/codscream6_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1739785,
+      "name": "codscream6_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codscream6_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1888746,
+      "name": "codscream6_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codscream6_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1878074,
+      "name": "codscream6_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codscream6_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1948812,
+      "name": "codscream6_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codscream6_5_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1749169,
+      "name": "codscream6_5_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codscream6_6_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1972078,
+      "name": "codscream6_6_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codscream6_raw_1.png",
+      "ext": ".png",
+      "size": 818214,
+      "name": "codscream6_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/codscream6_raw_2.png",
+      "ext": ".png",
+      "size": 870346,
+      "name": "codscream6_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/codscream6_raw_3.png",
+      "ext": ".png",
+      "size": 867475,
+      "name": "codscream6_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/codscream6_raw_4.png",
+      "ext": ".png",
+      "size": 909954,
+      "name": "codscream6_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/codscream6_raw_5.png",
+      "ext": ".png",
+      "size": 817634,
+      "name": "codscream6_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/codscream6_raw_6.png",
+      "ext": ".png",
+      "size": 905163,
+      "name": "codscream6_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/codwar6_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1844812,
+      "name": "codwar6_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codwar6_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1726877,
+      "name": "codwar6_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codwar6_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1547897,
+      "name": "codwar6_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codwar6_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1775026,
+      "name": "codwar6_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codwar6_5_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1904084,
+      "name": "codwar6_5_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codwar6_6_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1560469,
+      "name": "codwar6_6_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/codwar6_raw_1.png",
+      "ext": ".png",
+      "size": 850370,
+      "name": "codwar6_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/codwar6_raw_2.png",
+      "ext": ".png",
+      "size": 806605,
+      "name": "codwar6_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/codwar6_raw_3.png",
+      "ext": ".png",
+      "size": 746557,
+      "name": "codwar6_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/codwar6_raw_4.png",
+      "ext": ".png",
+      "size": 839861,
+      "name": "codwar6_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/codwar6_raw_5.png",
+      "ext": ".png",
+      "size": 883829,
+      "name": "codwar6_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/codwar6_raw_6.png",
+      "ext": ".png",
+      "size": 745877,
+      "name": "codwar6_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_1_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 517506,
+      "name": "gemini_batch10_1_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_10_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 671807,
+      "name": "gemini_batch10_10_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_2_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 611213,
+      "name": "gemini_batch10_2_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_3_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 565251,
+      "name": "gemini_batch10_3_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_4_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 652184,
+      "name": "gemini_batch10_4_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_5_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 509407,
+      "name": "gemini_batch10_5_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_6_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 511843,
+      "name": "gemini_batch10_6_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_7_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 542732,
+      "name": "gemini_batch10_7_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_8_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 578068,
+      "name": "gemini_batch10_8_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_9_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 611624,
+      "name": "gemini_batch10_9_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_1.png",
+      "ext": ".png",
+      "size": 726125,
+      "name": "gemini_batch10_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_10.png",
+      "ext": ".png",
+      "size": 874276,
+      "name": "gemini_batch10_raw_10.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_2.png",
+      "ext": ".png",
+      "size": 814552,
+      "name": "gemini_batch10_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_3.png",
+      "ext": ".png",
+      "size": 785788,
+      "name": "gemini_batch10_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_4.png",
+      "ext": ".png",
+      "size": 858862,
+      "name": "gemini_batch10_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_5.png",
+      "ext": ".png",
+      "size": 724333,
+      "name": "gemini_batch10_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_6.png",
+      "ext": ".png",
+      "size": 718372,
+      "name": "gemini_batch10_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_7.png",
+      "ext": ".png",
+      "size": 758161,
+      "name": "gemini_batch10_raw_7.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_8.png",
+      "ext": ".png",
+      "size": 783702,
+      "name": "gemini_batch10_raw_8.png"
+    },
+    {
+      "path": "/assets/generated/gemini_batch10_raw_9.png",
+      "ext": ".png",
+      "size": 819344,
+      "name": "gemini_batch10_raw_9.png"
+    },
+    {
+      "path": "/assets/generated/gemini_master_lobby_1_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 410291,
+      "name": "gemini_master_lobby_1_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/gemini_master_lobby_2_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 460547,
+      "name": "gemini_master_lobby_2_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1734790,
+      "name": "junglecombat8_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1798033,
+      "name": "junglecombat8_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1815448,
+      "name": "junglecombat8_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1946855,
+      "name": "junglecombat8_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_5_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1746313,
+      "name": "junglecombat8_5_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_6_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1817581,
+      "name": "junglecombat8_6_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_7_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1619664,
+      "name": "junglecombat8_7_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_8_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1727931,
+      "name": "junglecombat8_8_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_1.png",
+      "ext": ".png",
+      "size": 821909,
+      "name": "junglecombat8_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_2.png",
+      "ext": ".png",
+      "size": 848601,
+      "name": "junglecombat8_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_3.png",
+      "ext": ".png",
+      "size": 847988,
+      "name": "junglecombat8_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_4.png",
+      "ext": ".png",
+      "size": 916917,
+      "name": "junglecombat8_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_5.png",
+      "ext": ".png",
+      "size": 826548,
+      "name": "junglecombat8_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_6.png",
+      "ext": ".png",
+      "size": 858071,
+      "name": "junglecombat8_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_7.png",
+      "ext": ".png",
+      "size": 767041,
+      "name": "junglecombat8_raw_7.png"
+    },
+    {
+      "path": "/assets/generated/junglecombat8_raw_8.png",
+      "ext": ".png",
+      "size": 824746,
+      "name": "junglecombat8_raw_8.png"
+    },
+    {
+      "path": "/assets/generated/nbretry4_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1261578,
+      "name": "nbretry4_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/nbretry4_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1191657,
+      "name": "nbretry4_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/nbretry4_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1106149,
+      "name": "nbretry4_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/nbretry4_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1180215,
+      "name": "nbretry4_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/nbretry4_raw_1.png",
+      "ext": ".png",
+      "size": 676799,
+      "name": "nbretry4_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/nbretry4_raw_2.png",
+      "ext": ".png",
+      "size": 636949,
+      "name": "nbretry4_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/nbretry4_raw_3.png",
+      "ext": ".png",
+      "size": 612193,
+      "name": "nbretry4_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/nbretry4_raw_4.png",
+      "ext": ".png",
+      "size": 653546,
+      "name": "nbretry4_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/quick_quick_1_qsdnkabzbhrmy0cwg8qrmf8a9m_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 378235,
+      "name": "quick_quick_1_qsdnkabzbhrmy0cwg8qrmf8a9m_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/quick_quick_2_k1h213w8cdrmy0cwg8qvq85144_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 389555,
+      "name": "quick_quick_2_k1h213w8cdrmy0cwg8qvq85144_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/quick_quick_3_hk7gqrwhcsrmw0cwg8qt6v59g0_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 348414,
+      "name": "quick_quick_3_hk7gqrwhcsrmw0cwg8qt6v59g0_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/rebatch_rebatch_nb1_tdc9f9dmthrmt0cwg9ms0ms4gw_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 439513,
+      "name": "rebatch_rebatch_nb1_tdc9f9dmthrmt0cwg9ms0ms4gw_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/rebatch_rebatch_nb2_efgwkz7qbsrmy0cwg9mspzmpmw_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 447971,
+      "name": "rebatch_rebatch_nb2_efgwkz7qbsrmy0cwg9mspzmpmw_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/rebatch_rebatch_sd1_f7wndhhsx1rmt0cwg9nae9nz5m_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 452059,
+      "name": "rebatch_rebatch_sd1_f7wndhhsx1rmt0cwg9nae9nz5m_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/rebatch_rebatch_sd2_xvmbkhkx5xrmr0cwg9nabfj23w_1920x1080.jpg",
+      "ext": ".jpg",
+      "size": 605684,
+      "name": "rebatch_rebatch_sd2_xvmbkhkx5xrmr0cwg9nabfj23w_1920x1080.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_1_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1587870,
+      "name": "stylebible10_1_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_10_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1547642,
+      "name": "stylebible10_10_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_2_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1720028,
+      "name": "stylebible10_2_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_3_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1596679,
+      "name": "stylebible10_3_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_4_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1825699,
+      "name": "stylebible10_4_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_5_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1689168,
+      "name": "stylebible10_5_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_6_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1806887,
+      "name": "stylebible10_6_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_7_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1763534,
+      "name": "stylebible10_7_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_8_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1588624,
+      "name": "stylebible10_8_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_9_3840x2160.jpg",
+      "ext": ".jpg",
+      "size": 1536859,
+      "name": "stylebible10_9_3840x2160.jpg"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_1.png",
+      "ext": ".png",
+      "size": 782289,
+      "name": "stylebible10_raw_1.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_10.png",
+      "ext": ".png",
+      "size": 756138,
+      "name": "stylebible10_raw_10.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_2.png",
+      "ext": ".png",
+      "size": 808168,
+      "name": "stylebible10_raw_2.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_3.png",
+      "ext": ".png",
+      "size": 770064,
+      "name": "stylebible10_raw_3.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_4.png",
+      "ext": ".png",
+      "size": 854196,
+      "name": "stylebible10_raw_4.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_5.png",
+      "ext": ".png",
+      "size": 824084,
+      "name": "stylebible10_raw_5.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_6.png",
+      "ext": ".png",
+      "size": 851870,
+      "name": "stylebible10_raw_6.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_7.png",
+      "ext": ".png",
+      "size": 829622,
+      "name": "stylebible10_raw_7.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_8.png",
+      "ext": ".png",
+      "size": 764068,
+      "name": "stylebible10_raw_8.png"
+    },
+    {
+      "path": "/assets/generated/stylebible10_raw_9.png",
+      "ext": ".png",
+      "size": 726092,
+      "name": "stylebible10_raw_9.png"
+    },
+    {
+      "path": "/favicon-16.png",
+      "ext": ".png",
+      "size": 825,
+      "name": "favicon-16.png"
+    },
+    {
+      "path": "/favicon-32.png",
+      "ext": ".png",
+      "size": 1219,
+      "name": "favicon-32.png"
+    },
+    {
+      "path": "/favicon.ico",
+      "ext": ".ico",
+      "size": 3638,
+      "name": "favicon.ico"
+    },
+    {
+      "path": "/favicon.png",
+      "ext": ".png",
+      "size": 17222,
+      "name": "favicon.png"
+    },
+    {
+      "path": "/images/emote_1.mp4",
+      "ext": ".mp4",
+      "size": 25438454,
+      "name": "emote_1.mp4"
+    },
+    {
+      "path": "/images/emote_2.mp4",
+      "ext": ".mp4",
+      "size": 4894389,
+      "name": "emote_2.mp4"
+    },
+    {
+      "path": "/images/emote_3.mp4",
+      "ext": ".mp4",
+      "size": 846944,
+      "name": "emote_3.mp4"
+    },
+    {
+      "path": "/images/emote_shark_fight.mp4",
+      "ext": ".mp4",
+      "size": 11797603,
+      "name": "emote_shark_fight.mp4"
+    },
+    {
+      "path": "/images/emote-intro.mp4",
+      "ext": ".mp4",
+      "size": 3757425,
+      "name": "emote-intro.mp4"
+    },
+    {
+      "path": "/images/emote-victory.mp4",
+      "ext": ".mp4",
+      "size": 5460423,
+      "name": "emote-victory.mp4"
+    },
+    {
+      "path": "/images/emotes_bg.png",
+      "ext": ".png",
+      "size": 90202,
+      "name": "emotes_bg.png"
+    },
+    {
+      "path": "/images/freepik__a-breathtaking-heavenly-valhalla-fortress-floating__43812.jpeg",
+      "ext": ".jpeg",
+      "size": 87064,
+      "name": "freepik__a-breathtaking-heavenly-valhalla-fortress-floating__43812.jpeg"
+    },
+    {
+      "path": "/images/freepik__a-topdown-pixel-art-sprite-of-an-anthropomorphic-w__93820.png",
+      "ext": ".png",
+      "size": 144638,
+      "name": "freepik__a-topdown-pixel-art-sprite-of-an-anthropomorphic-w__93820.png"
+    },
+    {
+      "path": "/images/freepik_a_hyperrealistic_cinematic_shot_of_a_futuristic_an_minimax.mp4",
+      "ext": ".mp4",
+      "size": 1334461,
+      "name": "freepik_a_hyperrealistic_cinematic_shot_of_a_futuristic_an_minimax.mp4"
+    },
+    {
+      "path": "/images/freepik_a-breathtaking-heavenly-valhalla-fortress-floating_kling_1080p_16-9_24fps_43814.mp4",
+      "ext": ".mp4",
+      "size": 18725532,
+      "name": "freepik_a-breathtaking-heavenly-valhalla-fortress-floating_kling_1080p_16-9_24fps_43814.mp4"
+    },
+    {
+      "path": "/images/freepik_a-focused-armored-dolphinheaded-soldier-stands-mos_kling_1080p_16-9_24fps_43816.mp4",
+      "ext": ".mp4",
+      "size": 17884116,
+      "name": "freepik_a-focused-armored-dolphinheaded-soldier-stands-mos_kling_1080p_16-9_24fps_43816.mp4"
+    },
+    {
+      "path": "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43811.mp4",
+      "ext": ".mp4",
+      "size": 6976082,
+      "name": "freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43811.mp4"
+    },
+    {
+      "path": "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43817.mp4",
+      "ext": ".mp4",
+      "size": 6976082,
+      "name": "freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43817.mp4"
+    },
+    {
+      "path": "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_seedance_720p_16-9_24fps_43813.mp4",
+      "ext": ".mp4",
+      "size": 14935170,
+      "name": "freepik_a-focused-character-stands-mostly-still-in-the-sce_seedance_720p_16-9_24fps_43813.mp4"
+    },
+    {
+      "path": "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_seedance_720p_16-9_24fps_43815.mp4",
+      "ext": ".mp4",
+      "size": 14935170,
+      "name": "freepik_a-focused-character-stands-mostly-still-in-the-sce_seedance_720p_16-9_24fps_43815.mp4"
+    },
+    {
+      "path": "/images/freepik_dynamic_cinematic_shot_of_my_character_riding_on_t_minimax.mp4",
+      "ext": ".mp4",
+      "size": 3416518,
+      "name": "freepik_dynamic_cinematic_shot_of_my_character_riding_on_t_minimax.mp4"
+    },
+    {
+      "path": "/images/freepik_have_my_character_in_combat_on_the_roof_kling_1080p_16_9.mp4",
+      "ext": ".mp4",
+      "size": 11054539,
+      "name": "freepik_have_my_character_in_combat_on_the_roof_kling_1080p_16_9.mp4"
+    },
+    {
+      "path": "/images/loading_bg.png",
+      "ext": ".png",
+      "size": 47852,
+      "name": "loading_bg.png"
+    },
+    {
+      "path": "/images/menu-theme.mp3",
+      "ext": ".mp3",
+      "size": 3284042,
+      "name": "menu-theme.mp3"
+    },
+    {
+      "path": "/images/og-preview.png",
+      "ext": ".png",
+      "size": 47852,
+      "name": "og-preview.png"
+    },
+    {
+      "path": "/images/pasted_file_mucH54_image.png",
+      "ext": ".png",
+      "size": 527530,
+      "name": "pasted_file_mucH54_image.png"
+    },
+    {
+      "path": "/images/pasted_file_UTWmPr_image.png",
+      "ext": ".png",
+      "size": 614616,
+      "name": "pasted_file_UTWmPr_image.png"
+    },
+    {
+      "path": "/images/pasted_file_vPzptE_image.png",
+      "ext": ".png",
+      "size": 1251150,
+      "name": "pasted_file_vPzptE_image.png"
+    },
+    {
+      "path": "/images/Screenshot2026-01-13at7.29.37PM.png",
+      "ext": ".png",
+      "size": 265674,
+      "name": "Screenshot2026-01-13at7.29.37PM.png"
+    },
+    {
+      "path": "/images/trailer.mp4",
+      "ext": ".mp4",
+      "size": 5333700,
+      "name": "trailer.mp4"
+    },
+    {
+      "path": "/images/valhalla_map.jpg",
+      "ext": ".jpg",
+      "size": 87064,
+      "name": "valhalla_map.jpg"
+    },
+    {
+      "path": "/images/whale_soldier_intro.png",
+      "ext": ".png",
+      "size": 47852,
+      "name": "whale_soldier_intro.png"
+    },
+    {
+      "path": "/images/whale_soldier.png",
+      "ext": ".png",
+      "size": 144638,
+      "name": "whale_soldier.png"
+    },
+    {
+      "path": "/images/whale-ops-logo-mobile.svg",
+      "ext": ".svg",
+      "size": 7335,
+      "name": "whale-ops-logo-mobile.svg"
+    },
+    {
+      "path": "/images/whale-ops-logo-stacked.svg",
+      "ext": ".svg",
+      "size": 7328,
+      "name": "whale-ops-logo-stacked.svg"
+    },
+    {
+      "path": "/images/whale-ops-logo.svg",
+      "ext": ".svg",
+      "size": 6726,
+      "name": "whale-ops-logo.svg"
+    },
+    {
+      "path": "/images/whalevid.mp4",
+      "ext": ".mp4",
+      "size": 9104592,
+      "name": "whalevid.mp4"
+    }
+  ]
+}
