@@ -120,17 +120,7 @@ export default function Home() {
         })}
       </div>
 
-      {/* center operator showcase */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
-        <motion.img
-          src="/images/whale_soldier.png"
-          alt="Operator"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 0.96, y: 0 }}
-          transition={{ duration: 0.9 }}
-          className="h-[86vh] max-h-[980px] w-auto object-contain drop-shadow-[0_0_35px_rgba(124,234,255,0.35)]"
-        />
-      </div>
+
 
       {/* right player card */}
       <div className="absolute top-28 right-8 z-20 w-[300px] bg-black/40 border border-white/20 backdrop-blur-sm">
