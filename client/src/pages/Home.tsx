@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 // CABar removed
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -264,10 +264,9 @@ export default function Home() {
 
             {/* Right Controls */}
             <div className="hidden md:flex gap-6 text-sm font-bold tracking-widest text-white/70">
-              <div className="flex items-center gap-2 hover:text-white cursor-pointer transition-colors">
-                <div className="px-2 py-0.5 border border-white/40 rounded text-[10px] cursor-pointer" onClick={() => setCurrentVideoIndex(prev => (prev - 1 + BACKGROUND_VIDEOS.length) % BACKGROUND_VIDEOS.length)}>L1</div>
-                <span>Cycle Background</span>
-                <div className="px-2 py-0.5 border border-white/40 rounded text-[10px] cursor-pointer" onClick={() => setCurrentVideoIndex(prev => (prev + 1) % BACKGROUND_VIDEOS.length)}>R1</div>
+              <div className="flex items-center gap-2 text-white/60">
+                <div className="px-2 py-0.5 border border-white/30 rounded text-[10px]">BG</div>
+                <span>Static Image</span>
               </div>
               <div className="flex items-center gap-2 hover:text-white cursor-pointer transition-colors" onClick={() => {
                 setShowGlitch(true);
