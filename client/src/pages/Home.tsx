@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 // CABar removed
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -14,28 +14,11 @@ export default function Home() {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [activeMenu, setActiveMenu] = useState(MENU_ITEMS[0].id);
   const [showGlitch, setShowGlitch] = useState(false);
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [uiVisible, setUiVisible] = useState(true);
   const [showTrailerModal, setShowTrailerModal] = useState(false);
   const trailerModalRef = useRef<HTMLVideoElement>(null);
 
-  const BACKGROUND_VIDEOS = [
-    "/images/freepik_a-focused-character-stands-mostly-still-in-the-sce_kling_1080p_16-9_24fps_43817.mp4",
-    "/images/freepik_a_hyperrealistic_cinematic_shot_of_a_futuristic_an_minimax.mp4",
-    "/images/freepik_dynamic_cinematic_shot_of_my_character_riding_on_t_minimax.mp4",
-    "/images/freepik_have_my_character_in_combat_on_the_roof_kling_1080p_16_9.mp4"
-  ];
-
   // CA bar is shown by default, user can dismiss it
-
-  useEffect(() => {
-    // Cycle background videos every 6 seconds
-    const videoInterval = setInterval(() => {
-      setCurrentVideoIndex(prev => (prev + 1) % BACKGROUND_VIDEOS.length);
-    }, 6000);
-
-    return () => clearInterval(videoInterval);
-  }, []);
 
   useEffect(() => {
     // Simulate loading progress
@@ -82,10 +65,6 @@ export default function Home() {
             window.open(currentItem.link, "_blank");
           }
         }
-      } else if (e.key === "1") { // L1
-        setCurrentVideoIndex(prev => (prev - 1 + BACKGROUND_VIDEOS.length) % BACKGROUND_VIDEOS.length);
-      } else if (e.key === "2") { // R1
-        setCurrentVideoIndex(prev => (prev + 1) % BACKGROUND_VIDEOS.length);
       } else if (e.key === "Escape") { // O (Circle)
         setUiVisible(prev => !prev);
       } else if (e.key === "g") { // Triangle (mapped to 'g' for glitch)
@@ -102,29 +81,20 @@ export default function Home() {
     <div className="relative w-full h-screen overflow-hidden bg-black text-white font-rajdhani select-none">
 
 
-      {/* Background Video */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="wait">
-          <motion.video
-            key={currentVideoIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            autoPlay
-            loop
-            playsInline
-            className={`w-full h-full object-cover absolute inset-0 ${
-              currentVideoIndex === 1 || currentVideoIndex === 2 || currentVideoIndex === 3 ? "scale-x-[-1]" : ""
-            }`}
-            style={{ objectPosition: '35% center' }}
-          >
-            <source src={BACKGROUND_VIDEOS[currentVideoIndex]} type="video/mp4" />
-          </motion.video>
-        </AnimatePresence>
+        <motion.img
+          src="/images/whale_soldier_intro.png"
+          alt="Lobby background"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="w-full h-full object-cover absolute inset-0"
+          style={{ objectPosition: '35% center' }}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
         <div className="absolute inset-0 bg-[url('/images/grid_pattern.png')] opacity-10 mix-blend-overlay" />
-        
+
         {/* Dust Particles Overlay (Simulated with CSS) */}
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay" />
       </div>
